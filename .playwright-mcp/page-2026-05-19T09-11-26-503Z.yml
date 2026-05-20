@@ -1,0 +1,180 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation "main navigation" [ref=e3]:
+      - generic [ref=e4]:
+        - link "SnapSave" [ref=e6] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e7]: SnapSave
+        - generic [ref=e8]:
+          - generic [ref=e9]:
+            - link "Download Facebook Reels" [ref=e10] [cursor=pointer]:
+              - /url: /facebook-reels-download
+            - generic [ref=e12] [cursor=pointer]: More
+          - generic [ref=e15] [cursor=pointer]: Language
+  - main [ref=e16]:
+    - generic [ref=e17]:
+      - generic [ref=e19]:
+        - heading "Download Facebook Video" [level=1] [ref=e20]
+        - heading "Fb video download 1080p - 2K - 4K. Free. All devices" [level=2] [ref=e21]
+      - generic [ref=e23]:
+        - textbox "Url" [ref=e25]:
+          - /placeholder: Paste video URL Facebook
+        - button "Download" [ref=e27] [cursor=pointer]
+    - paragraph [ref=e31]: ADVERTISEMENT
+    - generic [ref=e32]:
+      - generic [ref=e37]:
+        - generic [ref=e40]:
+          - heading "Download SnapX Android App" [level=3] [ref=e41]
+          - generic [ref=e42]: It's fast, and light.
+        - link [ref=e45] [cursor=pointer]:
+          - /url: https://play.google.com/store/apps/details?id=com.snapd.video2026&referrer=web_organic
+      - separator [ref=e48]
+    - generic [ref=e52]:
+      - generic [ref=e55]:
+        - heading "Why you should use Fb downloader SnapSave" [level=2] [ref=e56]
+        - generic [ref=e57]:
+          - text: "SnapSave.App is the best Facebook video downloader to help you high quality Facebook video download: Full HD, 2K, 4K (mp4)."
+          - text: Download Facebook video to your phone, PC, or tablet with highest quality. Use our FB video downloader with your browser. No need to install any software. Support both Android, and iOS.
+      - generic [ref=e58]:
+        - generic [ref=e60]:
+          - generic [ref=e64]: Highest quality
+          - text: Our Facebook video download helps you download FULL HD, and 4K videos with sound. Most of the current tools only allow HD videos.
+        - generic [ref=e66]:
+          - generic [ref=e70]: Easy
+          - text: Facebook video downloader for every device (mobile phone, PC, or tablet), and every OS (Android, IOS). You don't need to install any software.
+        - generic [ref=e72]:
+          - generic [ref=e76]: Free
+          - text: SnapSave FB Downloader - It's always be free. We only place some ads to support our development.
+    - generic [ref=e78]:
+      - generic [ref=e79]:
+        - generic [ref=e82]:
+          - heading "How to Download video Facebook" [level=2] [ref=e83]
+          - generic [ref=e84]: Facebook video downloader with best formats 1080p - 2K - 4K for free
+        - generic [ref=e85]:
+          - generic [ref=e86]:
+            - generic [ref=e87] [cursor=pointer]:
+              - generic: Hover to play
+            - generic [ref=e91]:
+              - heading "1 Copy and paste video link" [level=3] [ref=e92]:
+                - generic [ref=e93]: "1"
+                - text: Copy and paste video link
+              - paragraph [ref=e94]:
+                - text: From
+                - link "Facebook" [ref=e95] [cursor=pointer]:
+                  - /url: https://www.facebook.com/
+                - text: ", copy the link of a video that you wish to download, then paste the link in SnapSave"
+          - generic [ref=e96]:
+            - generic [ref=e97] [cursor=pointer]:
+              - generic: Hover to play
+            - generic [ref=e101]:
+              - heading "2 Select output quality" [level=3] [ref=e102]:
+                - generic [ref=e103]: "2"
+                - text: Select output quality
+              - paragraph [ref=e104]: Select the video quality that you want to download
+          - generic [ref=e105]:
+            - generic [ref=e106] [cursor=pointer]:
+              - generic: Hover to play
+            - generic [ref=e110]:
+              - heading "3 Download Fb video" [level=3] [ref=e111]:
+                - generic [ref=e112]: "3"
+                - text: Download Fb video
+              - paragraph [ref=e113]: Wait for our server to process and download your device.
+        - link "Watch the instructional video" [ref=e115] [cursor=pointer]:
+          - /url: https://youtu.be/APVzQfDtH_M
+          - text: Watch the instructional video
+      - paragraph [ref=e119]: ADVERTISEMENT
+    - generic [ref=e122]:
+      - generic [ref=e125]:
+        - heading "SnapSave.App - Best Facebook Video Downloader" [level=2] [ref=e126]
+        - generic [ref=e127]: Key Features of SnapSave Facebook Downloader
+      - generic [ref=e129]:
+        - heading "Facebook Downloader" [level=3] [ref=e130]
+        - paragraph [ref=e131]: SnapSave was invented to help you Facebook video download and save all kinds of videos from Facebook to your device with the best quality (up to 4K). Videos on regular posts/Watch, Livestream videos, videos in public/private groups, … are all easily downloaded & saved from Fb with just a few clicks via SnapSave
+        - heading "Facebook Story Video Downloader" [level=3] [ref=e132]
+        - paragraph [ref=e133]: SnapSave also could download Fb video story of the best quality. All you need is to befriend the creator of the Story on Fb and follow the same steps as downloading private Facebook videos.
+    - generic [ref=e136]:
+      - heading "Frequently Asked Questions" [level=2] [ref=e140]
+      - generic [ref=e142]:
+        - generic [ref=e143]:
+          - generic [ref=e144] [cursor=pointer]:
+            - heading "Why Use SnapSave To Download Facebook Video?" [level=3] [ref=e146]:
+              - generic [ref=e147]: Why Use SnapSave To Download Facebook Video?
+            - paragraph [ref=e149]:
+              - text: According to user reviews and comments, SnapSave is currently the fastest, Highest, most stable
+              - link "Facebook Video Download" [ref=e150]:
+                - /url: https://snapsave.app
+              - text: tool at the moment, we offer the best Save video from Facebook for you, And continuously improve the quality of tools to provide users.
+          - generic [ref=e151] [cursor=pointer]:
+            - heading "How to download Facebook videos to your computer?" [level=3] [ref=e153]:
+              - generic [ref=e154]: How to download Facebook videos to your computer?
+            - paragraph [ref=e156]:
+              - text: On a computer Just copy the link of the Facebook video and paste it into the link input box provided at the top of this page and hit the Download button and you're done! See more SnapSave manual
+              - link "Instructions for using Snapsave to download Facebook videos" [ref=e157]:
+                - /url: https://SnapSave.App/blog/manual-sfull-download-video-facebook.html
+          - generic [ref=e158] [cursor=pointer]:
+            - heading "How to download Facebook videos to Android?" [level=3] [ref=e160]:
+              - generic [ref=e161]: How to download Facebook videos to Android?
+            - paragraph [ref=e163]: Just like downloading on a computer, it's very simple, go to SnapSave.App -> Import Facebook Video Link -> And Click Download -> Choose the quality you want to download (Support to 4K Video)
+          - generic [ref=e164] [cursor=pointer]:
+            - heading "How to Download 4k Facebook Videos?" [level=3] [ref=e166]:
+              - generic [ref=e167]: How to Download 4k Facebook Videos?
+            - paragraph [ref=e169]: You just need a 4K quality Facebook video link. Copy the link -> Access SnapSave.App -> Import Facebook Video Link -> And Press Download -> Choose the quality you 4K to download.
+          - generic [ref=e170] [cursor=pointer]:
+            - heading "How to download Facebook videos to your iPhone (iOS)?" [level=3] [ref=e172]:
+              - generic [ref=e173]: How to download Facebook videos to your iPhone (iOS)?
+            - paragraph [ref=e175]: IOS is a little more complicated, because iOS does not support Live Video download, you need to download Documents by Readdle, Open the application, Choose browser -> Access SnapSave.App -> Import Facebook Video Link -> And Click Download -> Select the quality you want to download.
+          - generic [ref=e176] [cursor=pointer]:
+            - heading "How to Download Facebook video online?" [level=3] [ref=e178]:
+              - generic [ref=e179]: How to Download Facebook video online?
+            - paragraph [ref=e181]: Oh ... Simply copy the link of the Facebook video you want to download and paste the link into the link entry box at SnapSave.App. The rest SnapSave will take care of itself.
+          - generic [ref=e182] [cursor=pointer]:
+            - heading "Can I save Facebook videos on my phone?" [level=3] [ref=e184]:
+              - generic [ref=e185]: Can I save Facebook videos on my phone?
+            - paragraph [ref=e187]: Of course, saving the Facebook video to your computer after you finish downloading will usually be in the Download folder of a Windows or Android machine, and the Iphone is more complicated than see above.
+          - generic [ref=e188] [cursor=pointer]:
+            - heading "Can I download Facebook Live stream videos?" [level=3] [ref=e190]:
+              - generic [ref=e191]: Can I download Facebook Live stream videos?
+            - paragraph [ref=e193]: Of course, But you can only download Facebook Live videos but only after they are finished. while playing will not be able to download.
+          - generic [ref=e194] [cursor=pointer]:
+            - heading "Does SnapSave.App store downloaded videos or keep a copy of the video?" [level=3] [ref=e196]:
+              - generic [ref=e197]: Does SnapSave.App store downloaded videos or keep a copy of the video?
+            - paragraph [ref=e199]: Oh no, SnapSave.App does not host videos nor keep copies of downloaded videos. We support Render only video with loss of audio and no archive. All videos are stored on Facebook's servers and only downloaded to your device.
+        - generic [ref=e200]:
+          - heading "Do you have any questions to answer?" [level=3] [ref=e201]
+          - generic [ref=e202]:
+            - text: Please contact us
+            - link "here" [ref=e203] [cursor=pointer]:
+              - /url: /landing/contact
+            - text: . We will reply to you as quickly as possible.
+    - paragraph [ref=e207]: ADVERTISEMENT
+    - generic [ref=e213]:
+      - generic [ref=e216]:
+        - heading "Download SnapX Android App" [level=3] [ref=e217]
+        - generic [ref=e218]: It's fast, and light.
+      - link [ref=e221] [cursor=pointer]:
+        - /url: https://play.google.com/store/apps/details?id=com.snapd.video2026&referrer=web_organic
+  - contentinfo [ref=e223]:
+    - generic [ref=e229]:
+      - generic [ref=e230]:
+        - heading "Company" [level=4] [ref=e231]
+        - list [ref=e232]:
+          - listitem [ref=e233]:
+            - link "Contact" [ref=e234] [cursor=pointer]:
+              - /url: https://snapsave.app/landing/contact
+          - listitem [ref=e235]:
+            - link "Blog" [ref=e236] [cursor=pointer]:
+              - /url: https://snapsave.app/blog
+      - generic [ref=e237]:
+        - heading "Legal" [level=4] [ref=e238]
+        - list [ref=e239]:
+          - listitem [ref=e240]:
+            - link "Terms of Service" [ref=e241] [cursor=pointer]:
+              - /url: https://snapsave.app/landing/terms-of-service
+          - listitem [ref=e242]:
+            - link "Privacy Policy" [ref=e243] [cursor=pointer]:
+              - /url: https://snapsave.app/landing/privacy-policy
+    - generic [ref=e248]:
+      - text: © 2026
+      - link "SnapSave" [ref=e249] [cursor=pointer]:
+        - /url: https://snapsave.app
+      - text: 4.0.2. All rights reserved.

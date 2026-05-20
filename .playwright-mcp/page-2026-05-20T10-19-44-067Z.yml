@@ -1,0 +1,132 @@
+- generic [active] [ref=e20]:
+  - generic [ref=e21]:
+    - complementary [ref=e22]:
+      - generic [ref=e23]:
+        - generic [ref=e24]: AC
+        - generic [ref=e25]:
+          - generic [ref=e26]: Agent Camp
+          - generic [ref=e27]: Quản trị đơn hàng
+      - navigation [ref=e28]:
+        - button "📊 Tổng quan" [ref=e29] [cursor=pointer]:
+          - generic [ref=e30]: 📊
+          - generic [ref=e31]: Tổng quan
+        - button "👥 Khách hàng" [ref=e32] [cursor=pointer]:
+          - generic [ref=e33]: 👥
+          - generic [ref=e34]: Khách hàng
+        - button "✉️ Email marketing" [ref=e35] [cursor=pointer]:
+          - generic [ref=e36]: ✉️
+          - generic [ref=e37]: Email marketing
+      - button "Thoát" [ref=e38] [cursor=pointer]
+    - generic [ref=e39]:
+      - generic [ref=e40]:
+        - generic [ref=e41]:
+          - heading "Tổng quan Agent Camp" [level=1] [ref=e42]
+          - generic [ref=e43]: Theo dõi leads, doanh thu và tỷ lệ chuyển đổi
+        - generic [ref=e44]:
+          - generic [ref=e45]:
+            - button "7d" [ref=e46] [cursor=pointer]
+            - button "30d" [ref=e47] [cursor=pointer]
+            - button "90d" [ref=e48] [cursor=pointer]
+          - button "⟳ Làm mới" [ref=e49] [cursor=pointer]
+      - generic [ref=e50]:
+        - generic [ref=e51]:
+          - generic [ref=e52]:
+            - generic [ref=e53]: Tổng đăng ký
+            - generic [ref=e54]: 👥
+          - generic [ref=e55]: "0"
+          - generic [ref=e56]:
+            - generic [ref=e57]: 30 ngày qua
+            - generic [ref=e58]: — 0%
+        - generic [ref=e59]:
+          - generic [ref=e60]:
+            - generic [ref=e61]: Đã thanh toán
+            - generic [ref=e62]: 💳
+          - generic [ref=e63]: "0"
+          - generic [ref=e64]:
+            - generic [ref=e65]: 0 chờ thanh toán
+            - generic [ref=e66]: — 0%
+        - generic [ref=e67]:
+          - generic [ref=e68]:
+            - generic [ref=e69]: Tỷ lệ chuyển đổi
+            - generic [ref=e70]: 📈
+          - generic [ref=e71]: 0.0%
+          - generic [ref=e72]:
+            - generic [ref=e73]: Paid / tổng leads
+            - generic [ref=e74]: — 0đ
+        - generic [ref=e75]:
+          - generic [ref=e76]:
+            - generic [ref=e77]: Doanh thu
+            - generic [ref=e78]: 💰
+          - generic [ref=e79]: 0 đ
+          - generic [ref=e80]:
+            - generic [ref=e81]: 0 đ
+            - generic [ref=e82]: — 0%
+      - generic [ref=e83]:
+        - generic [ref=e84]:
+          - generic [ref=e85]: Xu hướng theo ngày
+          - generic [ref=e88]:
+            - list [ref=e90]:
+              - listitem [ref=e91]:
+                - img "Doanh thu legend icon" [ref=e92]
+                - text: Doanh thu
+              - listitem [ref=e94]:
+                - img "Đã thanh toán legend icon" [ref=e95]
+                - text: Đã thanh toán
+              - listitem [ref=e97]:
+                - img "Đăng ký legend icon" [ref=e98]
+                - text: Đăng ký
+            - application [ref=e100]:
+              - generic [ref=e115]:
+                - generic [ref=e116]:
+                  - generic [ref=e118]: 23/04
+                  - generic [ref=e120]: 26/04
+                  - generic [ref=e122]: 29/04
+                  - generic [ref=e124]: 02/05
+                  - generic [ref=e126]: 05/05
+                  - generic [ref=e128]: 08/05
+                  - generic [ref=e130]: 11/05
+                  - generic [ref=e132]: 14/05
+                  - generic [ref=e134]: 17/05
+                  - generic [ref=e136]: 20/05
+                - generic [ref=e137]:
+                  - generic [ref=e139]: "0"
+                  - generic [ref=e141]: "1"
+                  - generic [ref=e143]: "2"
+                  - generic [ref=e145]: "3"
+                  - generic [ref=e147]: "4"
+                - generic [ref=e148]:
+                  - generic [ref=e150]: "0"
+                  - generic [ref=e152]: "1"
+                  - generic [ref=e154]: "2"
+                  - generic [ref=e156]: "3"
+                  - generic [ref=e158]: "4"
+        - generic [ref=e159]:
+          - generic [ref=e160]: Trạng thái
+          - generic [ref=e163]:
+            - list [ref=e165]:
+              - listitem [ref=e166]:
+                - img "Chưa thanh toán legend icon" [ref=e167]
+                - text: Chưa thanh toán
+              - listitem [ref=e169]:
+                - img "Hết hạn legend icon" [ref=e170]
+                - text: Hết hạn
+              - listitem [ref=e172]:
+                - img "Đã thanh toán legend icon" [ref=e173]
+                - text: Đã thanh toán
+            - application [ref=e175]
+          - generic [ref=e176]:
+            - generic [ref=e177]:
+              - generic [ref=e178]: Tổng lũy kế
+              - generic [ref=e179]: 0 đơn
+            - generic [ref=e180]:
+              - generic [ref=e181]: Doanh thu lũy kế
+              - generic [ref=e182]: 0 đ
+      - generic [ref=e183]:
+        - generic [ref=e184]: Thanh toán gần đây
+        - generic [ref=e185]: Chưa có thanh toán trong 30 ngày qua.
+  - button "Mở chat tư vấn" [ref=e8]:
+    - generic [ref=e9]: chat
+  - button "Open Next.js Dev Tools" [ref=e15] [cursor=pointer]:
+    - img [ref=e16]
+  - alert [ref=e19]
+  - generic [ref=e186]: "0"

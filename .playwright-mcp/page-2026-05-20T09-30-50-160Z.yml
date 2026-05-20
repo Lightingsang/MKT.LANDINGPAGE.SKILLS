@@ -1,0 +1,1380 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Agent Camp AGENT CAMP" [ref=e4] [cursor=pointer]:
+        - /url: "#"
+        - img "Agent Camp" [ref=e5]
+        - generic [ref=e6]: AGENT CAMP
+      - navigation [ref=e7]:
+        - link "AIOS" [ref=e8] [cursor=pointer]:
+          - /url: "#aios"
+        - link "Chương Trình" [ref=e9] [cursor=pointer]:
+          - /url: "#curriculum"
+        - link "Hệ Thống" [ref=e10] [cursor=pointer]:
+          - /url: "#systems"
+        - link "Giá Vé" [ref=e11] [cursor=pointer]:
+          - /url: "#pricing"
+        - link "FAQ" [ref=e12] [cursor=pointer]:
+          - /url: "#faq"
+        - link "Giữ Chỗ" [ref=e13] [cursor=pointer]:
+          - /url: "#register"
+  - generic:
+    - generic:
+      - generic: HT
+      - generic:
+        - generic:
+          - generic: Hoang Tran
+        - generic: hoanghd***@gmail.com
+        - generic: vừa giữ chỗ Agent Camp — vừa xong
+      - button "Đóng":
+        - generic: close
+  - main [ref=e14]:
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - generic [ref=e18]:
+          - generic [ref=e19]: forklift
+          - text: CHUYỂN GIAO · KHÔNG PHẢI KHOÁ HỌC
+        - generic [ref=e20]:
+          - generic [ref=e21]: groups
+          - text: DÀNH CHO CHỦ DN · CHUYÊN GIA · NGƯỜI KINH DOANH
+      - heading "Cách Chủ Doanh Nghiệp Nhỏ Vận Hành Như Tổ Chức Lớn — Trong 3 Ngày, Không Cần Tuyển Thêm Một Nhân Viên Nào" [level=1] [ref=e22]:
+        - text: Cách Chủ Doanh Nghiệp Nhỏ Vận Hành Như Tổ Chức Lớn
+        - text: — Trong 3 Ngày, Không Cần Tuyển Thêm Một Nhân Viên Nào
+      - paragraph [ref=e23]: Bằng AIOS — hệ điều hành AI Agent vận hành marketing, bán hàng, xây kênh và mở rộng mô hình kinh doanh thay cho 5-10 nhân sự truyền thống.
+      - generic [ref=e24]:
+        - generic [ref=e25]: Chuyển giao tận tay — về đến nhà là làm được
+        - list [ref=e26]:
+          - listitem [ref=e27]:
+            - generic [ref=e28]: check_circle
+            - generic [ref=e29]: Bản đồ AIOS 12 lớp cho mô hình kinh doanh của bạn
+          - listitem [ref=e30]:
+            - generic [ref=e31]: check_circle
+            - generic [ref=e32]: Lộ trình 8 bước triển khai AI Agent (mang về làm ngay)
+          - listitem [ref=e33]:
+            - generic [ref=e34]: check_circle
+            - generic [ref=e35]: Showcase 8 hệ thống Agent thực chiến + roadmap 30 ngày
+      - generic [ref=e36]: AGENT CAMP · 3 NGÀY · ĐÀ LẠT · 29-31/05
+      - generic [ref=e38]:
+        - link "GIỮ CHỖ EARLY BIRD — 12.868.000Đ arrow_forward" [ref=e39] [cursor=pointer]:
+          - /url: "#register"
+          - text: GIỮ CHỖ EARLY BIRD — 12.868.000Đ
+          - generic [ref=e40]: arrow_forward
+        - generic [ref=e41]:
+          - generic [ref=e42]:
+            - generic [ref=e43]: group
+            - generic [ref=e44]: 38/60 ghế · còn 22
+          - generic [ref=e45]: ·
+          - generic [ref=e46]:
+            - generic [ref=e47]: schedule
+            - generic [ref=e48]: Early Bird hết hạn 20/05
+          - generic [ref=e49]: ·
+          - generic [ref=e50]:
+            - generic [ref=e51]: savings
+            - generic [ref=e52]: Tiết kiệm 14 triệu so với giá public
+        - generic [ref=e53]:
+          - generic [ref=e54]: Được dẫn dắt bởi 4 mentor
+          - generic [ref=e55]:
+            - generic [ref=e56]:
+              - img "Mr. Tony Hoang" [ref=e58]
+              - generic [ref=e59]:
+                - generic [ref=e60]: Mr. Tony Hoang
+                - generic [ref=e61]: CEO BimSpeed
+            - generic [ref=e62]:
+              - img "Mr. Tony Trieu" [ref=e64]
+              - generic [ref=e65]:
+                - generic [ref=e66]: Mr. Tony Trieu
+                - generic [ref=e67]: Founder Kaching Capital
+            - generic [ref=e68]:
+              - img "Ms. Thuy AI" [ref=e70]
+              - generic [ref=e71]:
+                - generic [ref=e72]: Ms. Thuy AI
+                - generic [ref=e73]: Mentor AIOS
+            - generic [ref=e74]:
+              - img "Thầy Trương Cảnh Thắng" [ref=e76]
+              - generic [ref=e77]:
+                - generic [ref=e78]: Thầy Trương Cảnh Thắng
+                - generic [ref=e79]: AI Affiliate · AI Content
+    - generic [ref=e82]:
+      - generic [ref=e84]:
+        - generic [ref=e85]:
+          - generic [ref=e86]: hub
+          - text: AIOS — AI OPERATING SYSTEM
+        - heading "Doanh Nghiệp Của Bạn Vận Hành Bằng AI Agent" [level=2] [ref=e87]
+        - paragraph [ref=e88]: Trước đây muốn tăng trưởng phải tuyển thêm người. Trong kỷ nguyên AI Agent, lợi thế thuộc về đội nhóm nhỏ biết thiết kế AIOS — hệ điều hành kết nối Agent, dữ liệu, quy trình và chiến lược thành một bộ máy tăng trưởng.
+      - generic [ref=e89]:
+        - generic [ref=e93]:
+          - generic [ref=e94]:
+            - generic [ref=e95]: AI
+            - generic [ref=e96]:
+              - generic [ref=e97]: AIOS Orchestrator
+              - generic [ref=e98]: Hệ Điều Hành Doanh Nghiệp
+              - generic [ref=e99]: Chủ doanh nghiệp ra chiến lược · AIOS triển khai
+          - generic [ref=e102]: Online
+        - generic [ref=e106]: Phân phối nhiệm vụ
+        - generic [ref=e112]:
+          - generic [ref=e114]:
+            - generic [ref=e119]:
+              - generic [ref=e120]: MK
+              - generic [ref=e121]:
+                - generic [ref=e122]: Marketing Agent
+                - generic [ref=e123]: Giám Đốc Marketing
+                - generic [ref=e124]: AIOS
+            - generic [ref=e130]: "Giao việc: Nghiên cứu thị trường"
+            - generic [ref=e131]:
+              - generic [ref=e134]:
+                - generic [ref=e135]: MR
+                - generic [ref=e136]:
+                  - generic [ref=e137]: Market Research
+                  - generic [ref=e138]: Phân tích insight
+              - generic [ref=e146]:
+                - generic [ref=e147]: CI
+                - generic [ref=e148]:
+                  - generic [ref=e149]: Customer Insight
+                  - generic [ref=e150]: Hiểu khách hàng
+              - generic [ref=e158]:
+                - generic [ref=e159]: CS
+                - generic [ref=e160]:
+                  - generic [ref=e161]: Content Strategy
+                  - generic [ref=e162]: Chiến lược nội dung
+              - generic [ref=e170]:
+                - generic [ref=e171]: CB
+                - generic [ref=e172]:
+                  - generic [ref=e173]: Campaign Builder
+                  - generic [ref=e174]: Thiết kế chiến dịch
+          - generic [ref=e178]:
+            - generic [ref=e183]:
+              - generic [ref=e184]: SL
+              - generic [ref=e185]:
+                - generic [ref=e186]: Sales Agent
+                - generic [ref=e187]: Giám Đốc Bán Hàng
+                - generic [ref=e188]: AIOS
+            - generic [ref=e194]: "Giao việc: Tối ưu chuyển đổi"
+            - generic [ref=e195]:
+              - generic [ref=e198]:
+                - generic [ref=e199]: SB
+                - generic [ref=e200]:
+                  - generic [ref=e201]: Script Builder
+                  - generic [ref=e202]: Kịch bản bán hàng
+              - generic [ref=e210]:
+                - generic [ref=e211]: LS
+                - generic [ref=e212]:
+                  - generic [ref=e213]: Lead Scorer
+                  - generic [ref=e214]: Phân loại lead
+              - generic [ref=e222]:
+                - generic [ref=e223]: OH
+                - generic [ref=e224]:
+                  - generic [ref=e225]: Objection Handler
+                  - generic [ref=e226]: Xử lý phản đối
+          - generic [ref=e230]:
+            - generic [ref=e235]:
+              - generic [ref=e236]: CG
+              - generic [ref=e237]:
+                - generic [ref=e238]: Channel Growth
+                - generic [ref=e239]: Giám Đốc Tăng Trưởng
+                - generic [ref=e240]: AIOS
+            - generic [ref=e246]: "Giao việc: Xây kênh đa nền tảng"
+            - generic [ref=e247]:
+              - generic [ref=e250]:
+                - generic [ref=e251]: HR
+                - generic [ref=e252]:
+                  - generic [ref=e253]: Hook Researcher
+                  - generic [ref=e254]: Tìm chủ đề viral
+              - generic [ref=e262]:
+                - generic [ref=e263]: VS
+                - generic [ref=e264]:
+                  - generic [ref=e265]: Video Scriptor
+                  - generic [ref=e266]: Viết kịch bản video
+              - generic [ref=e274]:
+                - generic [ref=e275]: MC
+                - generic [ref=e276]:
+                  - generic [ref=e277]: Multi-Channel
+                  - generic [ref=e278]: Nhân bản đa nền tảng
+              - generic [ref=e286]:
+                - generic [ref=e287]: RO
+                - generic [ref=e288]:
+                  - generic [ref=e289]: Retention Opt
+                  - generic [ref=e290]: Tối ưu hook & retention
+          - generic [ref=e294]:
+            - generic [ref=e299]:
+              - generic [ref=e300]: ST
+              - generic [ref=e301]:
+                - generic [ref=e302]: Strategy Agent
+                - generic [ref=e303]: Giám Đốc Chiến Lược
+                - generic [ref=e304]: AIOS
+            - generic [ref=e310]: "Giao việc: Mở rộng mô hình"
+            - generic [ref=e311]:
+              - generic [ref=e314]:
+                - generic [ref=e315]: BM
+                - generic [ref=e316]:
+                  - generic [ref=e317]: Business Map
+                  - generic [ref=e318]: Phân tích mô hình
+              - generic [ref=e326]:
+                - generic [ref=e327]: OB
+                - generic [ref=e328]:
+                  - generic [ref=e329]: Offer Builder
+                  - generic [ref=e330]: Thiết kế offer
+              - generic [ref=e338]:
+                - generic [ref=e339]: PT
+                - generic [ref=e340]:
+                  - generic [ref=e341]: Partnership
+                  - generic [ref=e342]: Tìm đối tác
+              - generic [ref=e350]:
+                - generic [ref=e351]: DC
+                - generic [ref=e352]:
+                  - generic [ref=e353]: Decision Coach
+                  - generic [ref=e354]: Hỗ trợ ra quyết định
+          - generic [ref=e358]:
+            - generic [ref=e363]:
+              - generic [ref=e364]: OP
+              - generic [ref=e365]:
+                - generic [ref=e366]: Operation Agent
+                - generic [ref=e367]: Giám Đốc Vận Hành
+                - generic [ref=e368]: AIOS
+            - generic [ref=e374]: "Giao việc: Chuẩn hóa quy trình"
+            - generic [ref=e375]:
+              - generic [ref=e378]:
+                - generic [ref=e379]: WD
+                - generic [ref=e380]:
+                  - generic [ref=e381]: Workflow Designer
+                  - generic [ref=e382]: Thiết kế quy trình
+              - generic [ref=e390]:
+                - generic [ref=e391]: KB
+                - generic [ref=e392]:
+                  - generic [ref=e393]: Knowledge Base
+                  - generic [ref=e394]: Chuẩn hóa tri thức
+              - generic [ref=e402]:
+                - generic [ref=e403]: AP
+                - generic [ref=e404]:
+                  - generic [ref=e405]: Automation Plan
+                  - generic [ref=e406]: Tự động hóa từng phần
+              - generic [ref=e414]:
+                - generic [ref=e415]: CC
+                - generic [ref=e416]:
+                  - generic [ref=e417]: Customer Care
+                  - generic [ref=e418]: Chăm sóc khách hàng
+      - generic [ref=e422]:
+        - generic [ref=e423]:
+          - generic [ref=e424]: smart_toy
+          - generic [ref=e425]: 20+
+          - generic [ref=e426]: Agent chuyên trách
+        - generic [ref=e427]:
+          - generic [ref=e428]: schedule
+          - generic [ref=e429]: 24/7
+          - generic [ref=e430]: Vận hành liên tục
+        - generic [ref=e431]:
+          - generic [ref=e432]: domain
+          - generic [ref=e433]: "5"
+          - generic [ref=e434]: Khối chức năng
+        - generic [ref=e435]:
+          - generic [ref=e436]: savings
+          - generic [ref=e437]: Tinh gọn
+          - generic [ref=e438]: Đội nhóm nhỏ
+    - generic [ref=e440]:
+      - generic [ref=e442]:
+        - generic [ref=e443]:
+          - generic [ref=e444]: forklift
+          - text: CHUYỂN GIAO · KHÔNG PHẢI KHOÁ HỌC
+        - heading "Bạn Đến Agent Camp Để Được Chuyển Giao — Không Phải Để Ngồi Học" [level=2] [ref=e445]
+        - paragraph [ref=e446]: 3 ngày này không phải lớp lý thuyết. Bạn xây hệ thống cùng mentor, mang về Agent đang chạy, và làm được luôn khi về nhà — không phải "học xong rồi tự tìm cách".
+      - generic [ref=e448]:
+        - generic [ref=e451]:
+          - generic [ref=e452]: close
+          - text: Khoá học thông thường
+        - generic [ref=e454]:
+          - generic [ref=e455]: check_circle
+          - text: Agent Camp
+      - generic [ref=e456]:
+        - generic [ref=e458]:
+          - generic [ref=e459]:
+            - generic [ref=e460]: school
+            - generic [ref=e462]: Cách dạy
+          - generic [ref=e463]:
+            - generic [ref=e464]: close
+            - paragraph [ref=e466]: Bài giảng + slide + ghi chép
+          - generic [ref=e467]:
+            - generic [ref=e468]: check_circle
+            - paragraph [ref=e470]: Demo hệ thống thật + làm cùng mentor
+        - generic [ref=e472]:
+          - generic [ref=e473]:
+            - generic [ref=e474]: inventory_2
+            - generic [ref=e476]: Bạn ra về với
+          - generic [ref=e477]:
+            - generic [ref=e478]: close
+            - paragraph [ref=e480]: Kiến thức trong đầu — về nhà tự apply
+          - generic [ref=e481]:
+            - generic [ref=e482]: check_circle
+            - paragraph [ref=e484]: Bộ Agent đang chạy + bản đồ AIOS + roadmap 30 ngày
+        - generic [ref=e486]:
+          - generic [ref=e487]:
+            - generic [ref=e488]: rocket_launch
+            - generic [ref=e490]: Thời điểm có kết quả
+          - generic [ref=e491]:
+            - generic [ref=e492]: close
+            - paragraph [ref=e494]: Vài tháng sau — nếu kiên trì
+          - generic [ref=e495]:
+            - generic [ref=e496]: check_circle
+            - paragraph [ref=e498]: Trong camp — chạy được luôn khi về
+        - generic [ref=e500]:
+          - generic [ref=e501]:
+            - generic [ref=e502]: engineering
+            - generic [ref=e504]: Vai trò của bạn
+          - generic [ref=e505]:
+            - generic [ref=e506]: close
+            - paragraph [ref=e508]: Học viên ngồi nghe
+          - generic [ref=e509]:
+            - generic [ref=e510]: check_circle
+            - paragraph [ref=e512]: Người được chuyển giao + xây cùng mentor
+        - generic [ref=e514]:
+          - generic [ref=e515]:
+            - generic [ref=e516]: person_pin
+            - generic [ref=e518]: Cá nhân hoá
+          - generic [ref=e519]:
+            - generic [ref=e520]: close
+            - paragraph [ref=e522]: Nội dung chung cho cả lớp
+          - generic [ref=e523]:
+            - generic [ref=e524]: check_circle
+            - paragraph [ref=e526]: Mang bài toán thật vào — phân tích cho mô hình của bạn
+      - generic [ref=e528]:
+        - paragraph [ref=e529]: Bạn không "đi học" — bạn đi xây.
+        - paragraph [ref=e530]: Mỗi ngày trong camp, bạn ra về với một mảnh ghép AIOS đã ráp xong cho doanh nghiệp mình.
+    - generic [ref=e532]:
+      - generic [ref=e534]:
+        - generic [ref=e535]:
+          - generic [ref=e536]: warning
+          - text: VẤN ĐỀ THỰC TẾ
+        - heading "Vì Sao Nhiều Người Dùng AI Nhưng Chưa Tạo Kết Quả Lớn?" [level=2] [ref=e537]
+        - paragraph [ref=e538]: Bạn không thiếu công cụ AI. Bạn đang thiếu một hệ điều hành AIOS.
+      - generic [ref=e540]:
+        - generic [ref=e542]:
+          - generic [ref=e544]: shuffle
+          - heading "Dùng AI rời rạc, chưa thành hệ thống" [level=3] [ref=e545]
+          - paragraph [ref=e546]: Hôm nay viết bài bằng ChatGPT, mai tạo ảnh bằng Midjourney, thấy tool mới lại thử — nhưng marketing và bán hàng vẫn rời rạc như cũ.
+        - generic [ref=e548]:
+          - generic [ref=e550]: help
+          - heading "Không biết AI hoá bộ phận nào trước" [level=3] [ref=e551]
+          - paragraph [ref=e552]: Bạn biết AI rất tiềm năng. Nhưng marketing, sales, nội dung, vận hành — đâu là điểm nên bắt đầu? Không có bản đồ rõ ràng.
+        - generic [ref=e554]:
+          - generic [ref=e556]: trending_down
+          - heading "Đội nhóm phình to, lợi nhuận teo nhỏ" [level=3] [ref=e557]
+          - paragraph [ref=e558]: Muốn làm nhiều việc hơn thì tuyển thêm người. Nhưng chi phí nhân sự tăng nhanh hơn tốc độ tăng trưởng doanh thu.
+        - generic [ref=e560]:
+          - generic [ref=e562]: person_off
+          - heading "Bán hàng phụ thuộc vào từng cá nhân" [level=3] [ref=e563]
+          - paragraph [ref=e564]: Sale giỏi nghỉ việc là doanh thu tụt. Không có quy trình, không có hệ thống — tăng trưởng phụ thuộc vào con người chứ không phải bộ máy.
+        - generic [ref=e566]:
+          - generic [ref=e568]: shopping_cart_off
+          - heading "Nội dung làm theo cảm hứng, kênh không đều" [level=3] [ref=e569]
+          - paragraph [ref=e570]: Tuần này đăng 5 bài, tháng sau im lặng. Không có content engine, không có chiến lược nhân bản — kênh tăng trưởng chậm và bấp bênh.
+        - generic [ref=e572]:
+          - generic [ref=e574]: schedule
+          - heading "Quy trình thủ công nuốt hết thời gian chiến lược" [level=3] [ref=e575]
+          - paragraph [ref=e576]: Chủ doanh nghiệp dành 80% thời gian xử lý việc lặt vặt. Không còn năng lượng để nghĩ chiến lược, mở thị trường mới hay xây kênh tăng trưởng.
+    - generic [ref=e578]:
+      - generic [ref=e580]:
+        - generic [ref=e581]:
+          - generic [ref=e582]: groups
+          - text: AGENT CAMP DÀNH CHO AI?
+        - heading "6 Nhóm Người Sẽ Tận Dụng Tối Đa" [level=2] [ref=e583]
+        - paragraph [ref=e584]: Nếu bạn nằm trong nhóm dưới đây và nghiêm túc muốn đi sâu — đây là chương trình dành cho bạn.
+      - generic [ref=e585]:
+        - generic [ref=e587]:
+          - generic [ref=e588]: "01"
+          - generic [ref=e590]: business_center
+          - heading "Chủ doanh nghiệp muốn tái cấu trúc bằng AI Agent" [level=3] [ref=e591]
+          - paragraph [ref=e592]: Có công ty, đội nhóm, sản phẩm — nhưng marketing chưa đều, sales phụ thuộc cá nhân, chi phí vận hành tăng và chưa biết AI hoá từ đâu.
+        - generic [ref=e594]:
+          - generic [ref=e595]: "02"
+          - generic [ref=e597]: person
+          - heading "Người kinh doanh cá nhân xây mô hình tinh gọn" [level=3] [ref=e598]
+          - paragraph [ref=e599]: Đang bán sản phẩm, dịch vụ, khoá học, tư vấn, affiliate hay đang xây cộng đồng. Cần xây phễu + content + chăm sóc bằng Agent thay vì làm tay mỗi ngày.
+        - generic [ref=e601]:
+          - generic [ref=e602]: "03"
+          - generic [ref=e604]: school
+          - heading "Chuyên gia, coach, nhà đào tạo nhân bản chuyên môn" [level=3] [ref=e605]
+          - paragraph [ref=e606]: "Có tri thức và kinh nghiệm nhưng chưa biến được thành hệ sinh thái: thương hiệu cá nhân + nội dung + sản phẩm tri thức + cộng đồng + phễu bán hàng."
+        - generic [ref=e608]:
+          - generic [ref=e609]: "04"
+          - generic [ref=e611]: public
+          - heading "Affiliate, TikTok US, Amazon KDP, POD, thị trường quốc tế" [level=3] [ref=e612]
+          - paragraph [ref=e613]: Quan tâm các mô hình kiếm tiền toàn cầu. Cần hệ thống Agent để nghiên cứu, sản xuất nội dung, xây kênh và mở rộng thay vì làm thủ công từng bước.
+        - generic [ref=e615]:
+          - generic [ref=e616]: "05"
+          - generic [ref=e618]: diversity_3
+          - heading "Người xây hệ sinh thái đối tác và cộng đồng" [level=3] [ref=e619]
+          - paragraph [ref=e620]: Có cộng đồng, đội sale, affiliate hoặc network đối tác. Cần Agent hỗ trợ tìm đối tác, đào tạo CTV, chuẩn hoá tài liệu, onboarding và xây Freedom Partnership.
+        - generic [ref=e622]:
+          - generic [ref=e623]: "06"
+          - generic [ref=e625]: rocket_launch
+          - heading "Thành viên Elite / Freedom Builders muốn đi sâu vào AIOS" [level=3] [ref=e626]
+          - paragraph [ref=e627]: Đang trong hệ sinh thái Elite hoặc Freedom Builders, muốn tăng tốc xây doanh nghiệp bằng AI Agent và tham gia làn sóng AIOS sâu hơn.
+      - generic [ref=e630]:
+        - generic [ref=e632]: block
+        - generic [ref=e633]:
+          - heading "Agent Camp KHÔNG phù hợp nếu bạn..." [level=3] [ref=e634]
+          - list [ref=e635]:
+            - listitem [ref=e636]:
+              - generic [ref=e637]: close
+              - text: Chỉ muốn học vài mẹo dùng AI cho vui
+            - listitem [ref=e638]:
+              - generic [ref=e639]: close
+              - text: Chỉ muốn sưu tầm prompt, không muốn đổi cách làm việc
+            - listitem [ref=e640]:
+              - generic [ref=e641]: close
+              - text: Chưa sẵn sàng đầu tư thời gian thực hành
+            - listitem [ref=e642]:
+              - generic [ref=e643]: close
+              - text: Kỳ vọng AI tạo kết quả mà không cần tư duy + hệ thống + hành động
+            - listitem [ref=e644]:
+              - generic [ref=e645]: close
+              - text: Chỉ muốn xem demo công nghệ, không định áp dụng vào mô hình thật
+          - paragraph [ref=e646]: Agent Camp dành cho người muốn đi thật — hiểu thật, làm thật, xây hệ thống thật, ứng dụng AI Agent để tạo lợi thế thật.
+    - generic [ref=e648]:
+      - generic [ref=e650]:
+        - generic [ref=e651]:
+          - generic [ref=e652]: target
+          - text: KẾT QUẢ SAU 3 NGÀY
+        - heading "Bạn Sẽ Mang Về Gì" [level=2] [ref=e653]
+        - paragraph [ref=e654]: Không chỉ là kiến thức. Bạn rời camp với bản đồ + lộ trình + tư duy + showcase + roadmap 30 ngày cho doanh nghiệp của mình.
+      - generic [ref=e655]:
+        - generic [ref=e657]:
+          - generic [ref=e658]: map
+          - heading "Bản Đồ AIOS Cho Doanh Nghiệp Của Bạn" [level=3] [ref=e659]
+          - paragraph [ref=e660]: "Nhìn mô hình theo 12 lớp: sản phẩm, thị trường, marketing, sales, kênh, nội dung, đội nhóm, vận hành, dữ liệu, đối tác — xác định khu vực AI hoá trước."
+        - generic [ref=e662]:
+          - generic [ref=e663]: alt_route
+          - heading "Lộ Trình 8 Bước Triển Khai Agent" [level=3] [ref=e664]
+          - paragraph [ref=e665]: Từ phân tích mô hình → tìm điểm nghẽn → thiết kế workflow → xây Agent → kết nối marketing/sales → đo lường → nhân bản sang bộ phận khác.
+        - generic [ref=e667]:
+          - generic [ref=e668]: psychology
+          - heading "Tư Duy Tái Cấu Trúc Doanh Nghiệp Bằng AI" [level=3] [ref=e669]
+          - paragraph [ref=e670]: "Biết cách đặt câu hỏi mới: việc nào lặp lại quá nhiều, quy trình nào chuẩn hoá được, bộ phận nào nên giao Agent, con người giữ vai trò gì."
+        - generic [ref=e672]:
+          - generic [ref=e673]: code_blocks
+          - heading "Năng Lực VibeCoding Business" [level=3] [ref=e674]
+          - paragraph [ref=e675]: Không cần biết code. Cần biết mô tả ý tưởng, mô hình tăng trưởng, quy trình đủ rõ để AI biến thành workflow, MVP, tài liệu bán hàng trong giờ — không phải tháng.
+        - generic [ref=e677]:
+          - generic [ref=e678]: view_carousel
+          - heading "Showcase Hệ Thống Agent Thực Tế" [level=3] [ref=e679]
+          - paragraph [ref=e680]: Xem hệ thống AIOS thật cho marketing, bán hàng, content engine, AI Affiliate, Amazon KDP, POD, thương hiệu cá nhân — cách các mảnh ghép kết nối thành bộ máy tăng trưởng.
+        - generic [ref=e682]:
+          - generic [ref=e683]: forum
+          - heading "Hỏi Đáp Cá Nhân Hoá Theo Bài Toán Thật" [level=3] [ref=e684]
+          - paragraph [ref=e685]: Mang doanh nghiệp thật của bạn vào — được phân tích, gợi ý và định hướng triển khai cho chính mô hình kinh doanh của bạn, không phải case study chung chung.
+    - generic [ref=e687]:
+      - generic [ref=e689]:
+        - generic [ref=e690]:
+          - generic [ref=e691]: calendar_month
+          - text: LỘ TRÌNH 3 NGÀY
+        - heading "CHƯƠNG TRÌNH AGENT CAMP" [level=2] [ref=e692]
+        - paragraph [ref=e693]: 3 ngày mastermind chuyên sâu tại Ba Vì — kết hợp huấn luyện, demo, thực hành và hỏi đáp cá nhân hoá.
+      - generic [ref=e695]:
+        - generic [ref=e696]: "01"
+        - generic [ref=e697]:
+          - generic [ref=e698]:
+            - generic [ref=e699]: NGÀY 1 — THỨ 5, 29/05
+            - heading "Tư duy AIOS & tái cấu trúc mô hình kinh doanh bằng AI Agent" [level=3] [ref=e700]
+            - paragraph [ref=e701]: Bức tranh lớn. Bạn hiểu vì sao AI Agent không chỉ là công cụ — mà là cách mới để thiết kế doanh nghiệp trong kỷ nguyên này.
+          - generic [ref=e702]:
+            - generic [ref=e703]:
+              - generic [ref=e704]:
+                - generic [ref=e705]: school
+                - generic [ref=e706]: Nội dung chính
+              - list [ref=e707]:
+                - listitem [ref=e708]:
+                  - generic [ref=e709]: check_circle
+                  - text: Sự khác nhau giữa AI Tool, AI Workflow, AI Agent và AIOS
+                - listitem [ref=e710]:
+                  - generic [ref=e711]: check_circle
+                  - text: Vì sao doanh nghiệp cần hệ điều hành AIOS
+                - listitem [ref=e712]:
+                  - generic [ref=e713]: check_circle
+                  - text: Phân tích doanh nghiệp theo thị trường, sản phẩm, kênh, đội nhóm, quy trình
+                - listitem [ref=e714]:
+                  - generic [ref=e715]: check_circle
+                  - text: Tìm điểm nghẽn trong marketing, bán hàng, xây kênh, vận hành
+                - listitem [ref=e716]:
+                  - generic [ref=e717]: check_circle
+                  - text: Xác định bộ phận nên AI hoá đầu tiên
+                - listitem [ref=e718]:
+                  - generic [ref=e719]: check_circle
+                  - text: Mô hình 'công ty Agent' cho SME
+            - generic [ref=e720]:
+              - generic [ref=e721]:
+                - generic [ref=e722]: build
+                - generic [ref=e723]: Thực hành
+              - list [ref=e724]:
+                - listitem [ref=e725]:
+                  - generic [ref=e726]: arrow_right_alt
+                  - text: Vẽ bản đồ mô hình kinh doanh hiện tại
+                - listitem [ref=e727]:
+                  - generic [ref=e728]: arrow_right_alt
+                  - text: Xác định điểm nghẽn lớn nhất
+                - listitem [ref=e729]:
+                  - generic [ref=e730]: arrow_right_alt
+                  - text: Chọn 1–3 khu vực ứng dụng Agent trước
+                - listitem [ref=e731]:
+                  - generic [ref=e732]: arrow_right_alt
+                  - text: Thiết kế phiên bản AIOS sơ bộ cho doanh nghiệp của bạn
+          - generic [ref=e734]:
+            - generic [ref=e735]: flag
+            - generic [ref=e736]:
+              - generic [ref=e737]: Kết quả ngày 01
+              - paragraph [ref=e738]: Có bản đồ rõ doanh nghiệp nên bắt đầu ứng dụng AI Agent từ đâu
+      - generic [ref=e740]:
+        - generic [ref=e741]: "02"
+        - generic [ref=e742]:
+          - generic [ref=e743]:
+            - generic [ref=e744]: NGÀY 2 — THỨ 6, 30/05
+            - heading "Xây hệ thống Agent cho Marketing, Bán hàng, Xây kênh & Tăng trưởng" [level=3] [ref=e745]
+            - paragraph [ref=e746]: AI chỉ thật sự có giá trị khi đi vào điểm tạo tiền của doanh nghiệp. Ngày 2 tập trung vào marketing, sales và content engine.
+          - generic [ref=e747]:
+            - generic [ref=e748]:
+              - generic [ref=e749]:
+                - generic [ref=e750]: school
+                - generic [ref=e751]: Nội dung chính
+              - list [ref=e752]:
+                - listitem [ref=e753]:
+                  - generic [ref=e754]: check_circle
+                  - text: Xây hệ thống Agent cho marketing đa kênh
+                - listitem [ref=e755]:
+                  - generic [ref=e756]: check_circle
+                  - text: Dùng Agent nghiên cứu thị trường, insight, pain point, hành vi mua
+                - listitem [ref=e757]:
+                  - generic [ref=e758]: check_circle
+                  - text: Xây chiến lược nội dung đa kênh có khả năng nhân bản
+                - listitem [ref=e759]:
+                  - generic [ref=e760]: check_circle
+                  - text: Xây Sales Agent tư vấn, chăm sóc, xử lý phản đối
+                - listitem [ref=e761]:
+                  - generic [ref=e762]: check_circle
+                  - text: Kết nối marketing → sales → chăm sóc thành một hệ thống
+                - listitem [ref=e763]:
+                  - generic [ref=e764]: check_circle
+                  - text: VibeCoding Business — biến ý tưởng thành workflow nhanh hơn
+            - generic [ref=e765]:
+              - generic [ref=e766]:
+                - generic [ref=e767]: build
+                - generic [ref=e768]: Thực hành
+              - list [ref=e769]:
+                - listitem [ref=e770]:
+                  - generic [ref=e771]: arrow_right_alt
+                  - text: Xác định kênh tăng trưởng quan trọng nhất cho mô hình
+                - listitem [ref=e772]:
+                  - generic [ref=e773]: arrow_right_alt
+                  - text: Xây cấu trúc hệ thống marketing + sales bằng Agent
+                - listitem [ref=e774]:
+                  - generic [ref=e775]: arrow_right_alt
+                  - text: Xác định các Agent cần có trong hệ thống tăng trưởng
+                - listitem [ref=e776]:
+                  - generic [ref=e777]: arrow_right_alt
+                  - text: "Thiết kế workflow: nội dung → niềm tin → nhu cầu → chuyển đổi → chăm sóc"
+          - generic [ref=e779]:
+            - generic [ref=e780]: flag
+            - generic [ref=e781]:
+              - generic [ref=e782]: Kết quả ngày 02
+              - paragraph [ref=e783]: Hiểu cách AI Agent hỗ trợ trực tiếp vào marketing, bán hàng và xây kênh
+      - generic [ref=e785]:
+        - generic [ref=e786]: "03"
+        - generic [ref=e787]:
+          - generic [ref=e788]:
+            - generic [ref=e789]: NGÀY 3 — THỨ 7, 31/05
+            - heading "AIOS cho Affiliate, Amazon KDP, POD, TikTok US & thị trường quốc tế" [level=3] [ref=e790]
+            - paragraph [ref=e791]: Các mô hình có khả năng nhân bản, mở rộng và đi ra thị trường lớn hơn — nhìn Affiliate / KDP / POD như hệ thống kinh doanh, không phải đăng link.
+          - generic [ref=e792]:
+            - generic [ref=e793]:
+              - generic [ref=e794]:
+                - generic [ref=e795]: school
+                - generic [ref=e796]: Nội dung chính
+              - list [ref=e797]:
+                - listitem [ref=e798]:
+                  - generic [ref=e799]: check_circle
+                  - text: Showcase hệ thống Amazon KDP vận hành với Agent
+                - listitem [ref=e800]:
+                  - generic [ref=e801]: check_circle
+                  - text: Showcase hệ thống POD vận hành với Agent
+                - listitem [ref=e802]:
+                  - generic [ref=e803]: check_circle
+                  - text: Dùng Agent nghiên cứu ngách, sản phẩm, từ khoá, thị trường
+                - listitem [ref=e804]:
+                  - generic [ref=e805]: check_circle
+                  - text: Thiết kế AI Affiliate Content Engine
+                - listitem [ref=e806]:
+                  - generic [ref=e807]: check_circle
+                  - text: Phân tích content win và nhân bản nhiều phiên bản
+                - listitem [ref=e808]:
+                  - generic [ref=e809]: check_circle
+                  - text: Xây đội Agent sản xuất nội dung hàng loạt
+            - generic [ref=e810]:
+              - generic [ref=e811]:
+                - generic [ref=e812]: build
+                - generic [ref=e813]: Thực hành
+              - list [ref=e814]:
+                - listitem [ref=e815]:
+                  - generic [ref=e816]: arrow_right_alt
+                  - text: Chọn 1 mô hình có thể triển khai bằng AIOS
+                - listitem [ref=e817]:
+                  - generic [ref=e818]: arrow_right_alt
+                  - text: Thiết kế bộ Agent cần có cho mô hình đó
+                - listitem [ref=e819]:
+                  - generic [ref=e820]: arrow_right_alt
+                  - text: Xây roadmap 30 ngày sau Agent Camp
+                - listitem [ref=e821]:
+                  - generic [ref=e822]: arrow_right_alt
+                  - text: Xác định cơ hội Freedom Partnership phù hợp
+          - generic [ref=e824]:
+            - generic [ref=e825]: flag
+            - generic [ref=e826]:
+              - generic [ref=e827]: Kết quả ngày 03
+              - paragraph [ref=e828]: Có hướng triển khai thực tế sau chương trình, không dừng ở cảm hứng
+    - generic [ref=e830]:
+      - generic [ref=e832]:
+        - generic [ref=e833]:
+          - generic [ref=e834]: dashboard
+          - text: 8 HỆ THỐNG AGENT THỰC TẾ
+        - heading "Showcase + Định Hướng Chuyển Giao" [level=2] [ref=e835]
+        - paragraph [ref=e836]: Tuỳ thời lượng và mức độ phù hợp của nhóm học viên, chương trình sẽ demo và định hướng triển khai các hệ thống Agent sau — bạn không chỉ xem từng tool, mà thấy cách các mảnh ghép kết nối thành hệ thống tăng trưởng.
+      - generic [ref=e837]:
+        - generic [ref=e839]:
+          - generic [ref=e840]: "01"
+          - generic [ref=e842]: campaign
+          - heading "Marketing Agent System" [level=3] [ref=e843]
+          - list [ref=e844]:
+            - listitem [ref=e845]:
+              - generic [ref=e846]: arrow_right_alt
+              - text: Nghiên cứu thị trường, phân tích khách hàng
+            - listitem [ref=e847]:
+              - generic [ref=e848]: arrow_right_alt
+              - text: Tìm insight, lên chiến lược nội dung
+            - listitem [ref=e849]:
+              - generic [ref=e850]: arrow_right_alt
+              - text: Xây thông điệp truyền thông
+            - listitem [ref=e851]:
+              - generic [ref=e852]: arrow_right_alt
+              - text: Đề xuất góc bán hàng
+            - listitem [ref=e853]:
+              - generic [ref=e854]: arrow_right_alt
+              - text: Tối ưu thu hút khách hàng
+        - generic [ref=e856]:
+          - generic [ref=e857]: "02"
+          - generic [ref=e859]: handshake
+          - heading "Sales Agent System" [level=3] [ref=e860]
+          - list [ref=e861]:
+            - listitem [ref=e862]:
+              - generic [ref=e863]: arrow_right_alt
+              - text: Xây kịch bản bán hàng, tư vấn
+            - listitem [ref=e864]:
+              - generic [ref=e865]: arrow_right_alt
+              - text: Phân tích nhu cầu khách hàng
+            - listitem [ref=e866]:
+              - generic [ref=e867]: arrow_right_alt
+              - text: Xử lý phản đối, phân loại lead
+            - listitem [ref=e868]:
+              - generic [ref=e869]: arrow_right_alt
+              - text: Tạo nội dung follow-up
+            - listitem [ref=e870]:
+              - generic [ref=e871]: arrow_right_alt
+              - text: Tối ưu tỷ lệ chuyển đổi
+        - generic [ref=e873]:
+          - generic [ref=e874]: "03"
+          - generic [ref=e876]: trending_up
+          - heading "Channel Growth Agent System" [level=3] [ref=e877]
+          - list [ref=e878]:
+            - listitem [ref=e879]:
+              - generic [ref=e880]: arrow_right_alt
+              - text: Tìm chủ đề nội dung, phân tích content win
+            - listitem [ref=e881]:
+              - generic [ref=e882]: arrow_right_alt
+              - text: Tạo lịch nội dung, kịch bản video
+            - listitem [ref=e883]:
+              - generic [ref=e884]: arrow_right_alt
+              - text: Tối ưu hook và retention
+            - listitem [ref=e885]:
+              - generic [ref=e886]: arrow_right_alt
+              - text: Nhân bản nội dung đa nền tảng
+            - listitem [ref=e887]:
+              - generic [ref=e888]: arrow_right_alt
+              - text: Xây hệ thống TikTok/YouTube/Facebook/cộng đồng
+        - generic [ref=e890]:
+          - generic [ref=e891]: "04"
+          - generic [ref=e893]: stars
+          - heading "Personal Branding Agent System" [level=3] [ref=e894]
+          - list [ref=e895]:
+            - listitem [ref=e896]:
+              - generic [ref=e897]: arrow_right_alt
+              - text: Xây định vị cá nhân
+            - listitem [ref=e898]:
+              - generic [ref=e899]: arrow_right_alt
+              - text: Tạo câu chuyện thương hiệu, trụ cột nội dung
+            - listitem [ref=e900]:
+              - generic [ref=e901]: arrow_right_alt
+              - text: Viết bài chuyên gia + hành trình
+            - listitem [ref=e902]:
+              - generic [ref=e903]: arrow_right_alt
+              - text: Tạo chiến dịch ra mắt sản phẩm
+            - listitem [ref=e904]:
+              - generic [ref=e905]: arrow_right_alt
+              - text: Biến chuyên môn thành hệ sinh thái nội dung
+        - generic [ref=e907]:
+          - generic [ref=e908]: "05"
+          - generic [ref=e910]: videocam
+          - heading "AI Affiliate Content Engine" [level=3] [ref=e911]
+          - list [ref=e912]:
+            - listitem [ref=e913]:
+              - generic [ref=e914]: arrow_right_alt
+              - text: Nghiên cứu sản phẩm, phân tích content win
+            - listitem [ref=e915]:
+              - generic [ref=e916]: arrow_right_alt
+              - text: Tạo nhiều biến thể kịch bản
+            - listitem [ref=e917]:
+              - generic [ref=e918]: arrow_right_alt
+              - text: Tối ưu hook, CTA, visual
+            - listitem [ref=e919]:
+              - generic [ref=e920]: arrow_right_alt
+              - text: Quy trình sản xuất nội dung hàng loạt
+            - listitem [ref=e921]:
+              - generic [ref=e922]: arrow_right_alt
+              - text: Triển khai TikTok / Shopee / Facebook
+        - generic [ref=e924]:
+          - generic [ref=e925]: "06"
+          - generic [ref=e927]: menu_book
+          - heading "Amazon KDP / POD Agent System" [level=3] [ref=e928]
+          - list [ref=e929]:
+            - listitem [ref=e930]:
+              - generic [ref=e931]: arrow_right_alt
+              - text: Nghiên cứu ngách, tìm ý tưởng sản phẩm
+            - listitem [ref=e932]:
+              - generic [ref=e933]: arrow_right_alt
+              - text: Phân tích từ khoá, tạo outline sách
+            - listitem [ref=e934]:
+              - generic [ref=e935]: arrow_right_alt
+              - text: Viết mô tả listing, tạo prompt thiết kế
+            - listitem [ref=e936]:
+              - generic [ref=e937]: arrow_right_alt
+              - text: Kiểm tra chất lượng, tối ưu SEO
+            - listitem [ref=e938]:
+              - generic [ref=e939]: arrow_right_alt
+              - text: Lên kế hoạch xuất bản
+        - generic [ref=e941]:
+          - generic [ref=e942]: "07"
+          - generic [ref=e944]: psychology_alt
+          - heading "Business Strategy Agent System" [level=3] [ref=e945]
+          - list [ref=e946]:
+            - listitem [ref=e947]:
+              - generic [ref=e948]: arrow_right_alt
+              - text: Phân tích mô hình kinh doanh
+            - listitem [ref=e949]:
+              - generic [ref=e950]: arrow_right_alt
+              - text: Tìm điểm nghẽn tăng trưởng
+            - listitem [ref=e951]:
+              - generic [ref=e952]: arrow_right_alt
+              - text: Đề xuất cơ hội + thiết kế offer
+            - listitem [ref=e953]:
+              - generic [ref=e954]: arrow_right_alt
+              - text: Phân tích thị trường, đối thủ
+            - listitem [ref=e955]:
+              - generic [ref=e956]: arrow_right_alt
+              - text: Hỗ trợ ra quyết định chiến lược
+        - generic [ref=e958]:
+          - generic [ref=e959]: "08"
+          - generic [ref=e961]: diversity_3
+          - heading "Freedom Partnership System" [level=3] [ref=e962]
+          - list [ref=e963]:
+            - listitem [ref=e964]:
+              - generic [ref=e965]: arrow_right_alt
+              - text: Tìm kiếm đối tác phù hợp
+            - listitem [ref=e966]:
+              - generic [ref=e967]: arrow_right_alt
+              - text: Xây thông điệp + quyền lợi đối tác
+            - listitem [ref=e968]:
+              - generic [ref=e969]: arrow_right_alt
+              - text: Tạo tài liệu mời hợp tác, kịch bản tư vấn
+            - listitem [ref=e970]:
+              - generic [ref=e971]: arrow_right_alt
+              - text: Xây quy trình onboarding
+            - listitem [ref=e972]:
+              - generic [ref=e973]: arrow_right_alt
+              - text: Phát triển cộng đồng và hệ sinh thái
+      - paragraph [ref=e976]: Người thắng không phải người thử nhiều tool nhất. Người thắng là người biết kết nối các công cụ, Agent và workflow thành một hệ thống kinh doanh thật.
+    - generic [ref=e978]:
+      - generic [ref=e980]:
+        - generic [ref=e981]:
+          - generic [ref=e982]: swap_horiz
+          - text: TRƯỚC & SAU AGENT CAMP
+        - heading "3 Ngày Tạo Khoảng Cách Khác Biệt Rõ Rệt" [level=2] [ref=e983]
+      - generic [ref=e984]:
+        - generic [ref=e986]:
+          - generic [ref=e987]:
+            - generic [ref=e989]: close
+            - generic [ref=e990]:
+              - generic [ref=e991]: Trước Agent Camp
+              - heading "Hiện tại của bạn" [level=3] [ref=e992]
+          - list [ref=e993]:
+            - listitem [ref=e994]:
+              - generic [ref=e995]: remove
+              - text: Biết AI rất tiềm năng nhưng chưa biết ứng dụng vào đâu
+            - listitem [ref=e996]:
+              - generic [ref=e997]: remove
+              - text: Dùng nhiều tool nhưng chưa tạo thành hệ thống
+            - listitem [ref=e998]:
+              - generic [ref=e999]: remove
+              - text: Muốn tăng trưởng nhưng đội nhóm còn chậm
+            - listitem [ref=e1000]:
+              - generic [ref=e1001]: remove
+              - text: Muốn xây kênh nhưng nội dung chưa đều
+            - listitem [ref=e1002]:
+              - generic [ref=e1003]: remove
+              - text: Muốn marketing tốt hơn nhưng thiếu chiến lược
+            - listitem [ref=e1004]:
+              - generic [ref=e1005]: remove
+              - text: Muốn bán hàng tốt hơn nhưng thiếu quy trình
+            - listitem [ref=e1006]:
+              - generic [ref=e1007]: remove
+              - text: Muốn làm affiliate / KDP / POD nhưng còn thủ công
+            - listitem [ref=e1008]:
+              - generic [ref=e1009]: remove
+              - text: Muốn ứng dụng Agent nhưng chưa có bản đồ
+            - listitem [ref=e1010]:
+              - generic [ref=e1011]: remove
+              - text: Muốn tái cấu trúc doanh nghiệp nhưng thiếu phương pháp
+        - generic [ref=e1013]:
+          - generic [ref=e1014]:
+            - generic [ref=e1016]: check
+            - generic [ref=e1017]:
+              - generic [ref=e1018]: Sau Agent Camp
+              - heading "Phiên bản tiên phong" [level=3] [ref=e1019]
+          - list [ref=e1020]:
+            - listitem [ref=e1021]:
+              - generic [ref=e1022]: check_circle
+              - text: Hiểu AIOS là gì và vì sao quan trọng
+            - listitem [ref=e1023]:
+              - generic [ref=e1024]: check_circle
+              - text: Có bản đồ ứng dụng AI Agent cho mô hình của mình
+            - listitem [ref=e1025]:
+              - generic [ref=e1026]: check_circle
+              - text: Biết bộ phận nào nên AI hoá trước
+            - listitem [ref=e1027]:
+              - generic [ref=e1028]: check_circle
+              - text: Biết cách thiết kế workflow và Agent
+            - listitem [ref=e1029]:
+              - generic [ref=e1030]: check_circle
+              - text: Biết dùng AI cho marketing, bán hàng, xây kênh
+            - listitem [ref=e1031]:
+              - generic [ref=e1032]: check_circle
+              - text: Nhìn rõ mô hình Affiliate / KDP / POD bằng Agent
+            - listitem [ref=e1033]:
+              - generic [ref=e1034]: check_circle
+              - text: Có roadmap 30 ngày triển khai sau chương trình
+            - listitem [ref=e1035]:
+              - generic [ref=e1036]: check_circle
+              - text: Kết nối với nhóm người cùng tư duy tiên phong
+            - listitem [ref=e1037]:
+              - generic [ref=e1038]: check_circle
+              - text: Tự tin bước vào kỷ nguyên AI Agent
+    - generic [ref=e1040]:
+      - generic [ref=e1042]:
+        - generic [ref=e1043]:
+          - generic [ref=e1044]: school
+          - text: MENTOR TRỰC TIẾP DẪN DẮT
+        - heading "Đội Ngũ Huấn Luyện" [level=2] [ref=e1045]
+        - paragraph [ref=e1046]: 4 mentor có hệ thống AIOS thực chiến — không phải lý thuyết, không phải case study sao chép.
+      - generic [ref=e1047]:
+        - generic [ref=e1049]:
+          - img "Mr. Tony Hoang" [ref=e1051]
+          - generic [ref=e1052]:
+            - heading "Mr. Tony Hoang" [level=3] [ref=e1053]
+            - paragraph [ref=e1054]: CEO BimSpeed · AIOS Architect
+            - paragraph [ref=e1055]: Chuyên gia hệ thống AI Agent & tự động hoá doanh nghiệp. Người dẫn dắt tư duy xây hệ điều hành AIOS cho SME — biến đội nhóm nhỏ vận hành như tổ chức lớn.
+        - generic [ref=e1057]:
+          - img "Mr. Tony Trieu" [ref=e1059]
+          - generic [ref=e1060]:
+            - heading "Mr. Tony Trieu" [level=3] [ref=e1061]
+            - paragraph [ref=e1062]: Founder & CEO Kaching Capital
+            - paragraph [ref=e1063]: Nhà sáng lập các dự án AI quy mô lớn. Chuyên gia chiến lược AI cho Amazon KDP, POD, AI Affiliate và mô hình kinh doanh quốc tế bằng AI Agent.
+        - generic [ref=e1065]:
+          - img "Ms. Thuy AI" [ref=e1067]
+          - generic [ref=e1068]:
+            - heading "Ms. Thuy AI" [level=3] [ref=e1069]
+            - paragraph [ref=e1070]: Chuyên gia AI Agent · Mentor AIOS
+            - paragraph [ref=e1071]: Người đồng hành cùng học viên trong hành trình ứng dụng AI Agent vào doanh nghiệp — từ tư duy đến triển khai, từ chiến lược đến kết quả.
+        - generic [ref=e1073]:
+          - img "Thầy Trương Cảnh Thắng" [ref=e1075]
+          - generic [ref=e1076]:
+            - heading "Thầy Trương Cảnh Thắng" [level=3] [ref=e1077]
+            - paragraph [ref=e1078]: Chuyên gia AI Affiliate Marketing & AI Content
+            - paragraph [ref=e1079]: Trực tiếp tạo ra thu nhập thực tế trong lĩnh vực Affiliate Marketing, AI Content và hệ thống nội dung bán hàng bằng AI. Đã đào tạo hàng trăm học viên từ con số 0 đến có kết quả thực tế.
+    - generic [ref=e1081]:
+      - generic [ref=e1082]:
+        - generic [ref=e1084]:
+          - generic [ref=e1085]:
+            - generic [ref=e1086]: location_on
+            - text: ĐỊA ĐIỂM TỔ CHỨC
+          - heading "Camp Ba Vì — Không Gian Thực Tế" [level=2] [ref=e1087]
+          - paragraph [ref=e1088]: Khu nghỉ dưỡng riêng tư giữa núi rừng Ba Vì — không gian làm việc, ăn uống, networking và nghỉ ngơi trong 3 ngày 2 đêm
+        - generic [ref=e1089]:
+          - 'button "Không gian Camp Ba Vì #1" [ref=e1091] [cursor=pointer]':
+            - 'img "Không gian Camp Ba Vì #1" [ref=e1092]'
+            - generic [ref=e1094]: zoom_in
+          - 'button "Không gian Camp Ba Vì #2" [ref=e1096] [cursor=pointer]':
+            - 'img "Không gian Camp Ba Vì #2" [ref=e1097]'
+            - generic [ref=e1099]: zoom_in
+          - 'button "Không gian Camp Ba Vì #3" [ref=e1101] [cursor=pointer]':
+            - 'img "Không gian Camp Ba Vì #3" [ref=e1102]'
+            - generic [ref=e1104]: zoom_in
+          - 'button "Không gian Camp Ba Vì #4" [ref=e1106] [cursor=pointer]':
+            - 'img "Không gian Camp Ba Vì #4" [ref=e1107]'
+            - generic [ref=e1109]: zoom_in
+          - 'button "Không gian Camp Ba Vì #5" [ref=e1111] [cursor=pointer]':
+            - 'img "Không gian Camp Ba Vì #5" [ref=e1112]'
+            - generic [ref=e1114]: zoom_in
+          - 'button "Không gian Camp Ba Vì #6" [ref=e1116] [cursor=pointer]':
+            - 'img "Không gian Camp Ba Vì #6" [ref=e1117]'
+            - generic [ref=e1119]: zoom_in
+          - 'button "Không gian Camp Ba Vì #7" [ref=e1121] [cursor=pointer]':
+            - 'img "Không gian Camp Ba Vì #7" [ref=e1122]'
+            - generic [ref=e1124]: zoom_in
+          - 'button "Không gian Camp Ba Vì #8" [ref=e1126] [cursor=pointer]':
+            - 'img "Không gian Camp Ba Vì #8" [ref=e1127]'
+            - generic [ref=e1129]: zoom_in
+          - 'button "Không gian Camp Ba Vì #9" [ref=e1131] [cursor=pointer]':
+            - 'img "Không gian Camp Ba Vì #9" [ref=e1132]'
+            - generic [ref=e1134]: zoom_in
+          - 'button "Không gian Camp Ba Vì #10" [ref=e1136] [cursor=pointer]':
+            - 'img "Không gian Camp Ba Vì #10" [ref=e1137]'
+            - generic [ref=e1139]: zoom_in
+          - 'button "Không gian Camp Ba Vì #11" [ref=e1141] [cursor=pointer]':
+            - 'img "Không gian Camp Ba Vì #11" [ref=e1142]'
+            - generic [ref=e1144]: zoom_in
+          - 'button "Không gian Camp Ba Vì #12" [ref=e1146] [cursor=pointer]':
+            - 'img "Không gian Camp Ba Vì #12" [ref=e1147]'
+            - generic [ref=e1149]: zoom_in
+        - button "expand_more Xem thêm 29 ảnh" [ref=e1151]:
+          - generic [ref=e1152]: expand_more
+          - text: Xem thêm 29 ảnh
+      - generic [ref=e1153]:
+        - generic [ref=e1155]:
+          - generic [ref=e1156]:
+            - generic [ref=e1157]: photo_camera
+            - text: HÌNH ẢNH THỰC TẾ
+          - heading "Speakers Tại Các Sự Kiện" [level=2] [ref=e1158]
+          - paragraph [ref=e1159]: Hoàng Trần & Tony Trieu thuyết trình trực tiếp về AI Agent & OpenClaw
+        - generic [ref=e1160]:
+          - button "Speaker thuyết trình về OpenClaw Toolkit zoom_in Giới thiệu The OpenClaw Toolkit — hệ thống AI Agent hoàn chỉnh" [ref=e1162] [cursor=pointer]:
+            - img "Speaker thuyết trình về OpenClaw Toolkit" [ref=e1163]
+            - generic [ref=e1165]:
+              - generic [ref=e1166]: zoom_in
+              - generic [ref=e1167]: Giới thiệu The OpenClaw Toolkit — hệ thống AI Agent hoàn chỉnh
+          - 'button "Speaker demo quy trình AI Agent ra mắt sản phẩm zoom_in Demo: Agent ra mắt sản phẩm Amazon trong vài phút" [ref=e1169] [cursor=pointer]':
+            - img "Speaker demo quy trình AI Agent ra mắt sản phẩm" [ref=e1170]
+            - generic [ref=e1172]:
+              - generic [ref=e1173]: zoom_in
+              - generic [ref=e1174]: "Demo: Agent ra mắt sản phẩm Amazon trong vài phút"
+          - button "Hệ thống AIOS — AI Operating System zoom_in AIOS — Hệ điều hành AI cho doanh nghiệp" [ref=e1176] [cursor=pointer]:
+            - img "Hệ thống AIOS — AI Operating System" [ref=e1177]
+            - generic [ref=e1179]:
+              - generic [ref=e1180]: zoom_in
+              - generic [ref=e1181]: AIOS — Hệ điều hành AI cho doanh nghiệp
+          - button "Ms. Thuy AI — Chuyên gia AI Agent zoom_in Ms. Thuy AI — Mentor AIOS đồng hành cùng học viên" [ref=e1183] [cursor=pointer]:
+            - img "Ms. Thuy AI — Chuyên gia AI Agent" [ref=e1184]
+            - generic [ref=e1186]:
+              - generic [ref=e1187]: zoom_in
+              - generic [ref=e1188]: Ms. Thuy AI — Mentor AIOS đồng hành cùng học viên
+          - button "Hội trường sự kiện AI Agent zoom_in Hội trường — Sự kiện AI Agent thực chiến" [ref=e1190] [cursor=pointer]:
+            - img "Hội trường sự kiện AI Agent" [ref=e1191]
+            - generic [ref=e1193]:
+              - generic [ref=e1194]: zoom_in
+              - generic [ref=e1195]: Hội trường — Sự kiện AI Agent thực chiến
+          - button "Tony Trieu thuyết trình tại hội trường zoom_in Tony Trieu chia sẻ kinh nghiệm KDP & AI Agent" [ref=e1197] [cursor=pointer]:
+            - img "Tony Trieu thuyết trình tại hội trường" [ref=e1198]
+            - generic [ref=e1200]:
+              - generic [ref=e1201]: zoom_in
+              - generic [ref=e1202]: Tony Trieu chia sẻ kinh nghiệm KDP & AI Agent
+          - button "Thầy Trương Cảnh Thắng — AI Affiliate Marketing zoom_in Thầy Trương Cảnh Thắng — Chuyên gia AI Affiliate Marketing" [ref=e1204] [cursor=pointer]:
+            - img "Thầy Trương Cảnh Thắng — AI Affiliate Marketing" [ref=e1205]
+            - generic [ref=e1207]:
+              - generic [ref=e1208]: zoom_in
+              - generic [ref=e1209]: Thầy Trương Cảnh Thắng — Chuyên gia AI Affiliate Marketing
+          - button "Thầy Trương Cảnh Thắng tại sự kiện AI Content zoom_in Thầy Trương Cảnh Thắng — Sự kiện AI Content thực chiến" [ref=e1211] [cursor=pointer]:
+            - img "Thầy Trương Cảnh Thắng tại sự kiện AI Content" [ref=e1212]
+            - generic [ref=e1214]:
+              - generic [ref=e1215]: zoom_in
+              - generic [ref=e1216]: Thầy Trương Cảnh Thắng — Sự kiện AI Content thực chiến
+          - button "Thầy Trương Cảnh Thắng chia sẻ tại workshop zoom_in Thầy Trương Cảnh Thắng — Workshop AI hệ thống nội dung" [ref=e1218] [cursor=pointer]:
+            - img "Thầy Trương Cảnh Thắng chia sẻ tại workshop" [ref=e1219]
+            - generic [ref=e1221]:
+              - generic [ref=e1222]: zoom_in
+              - generic [ref=e1223]: Thầy Trương Cảnh Thắng — Workshop AI hệ thống nội dung
+          - button "Thầy Trương Cảnh Thắng đào tạo học viên zoom_in Thầy Trương Cảnh Thắng — Đào tạo học viên AI Marketing" [ref=e1225] [cursor=pointer]:
+            - img "Thầy Trương Cảnh Thắng đào tạo học viên" [ref=e1226]
+            - generic [ref=e1228]:
+              - generic [ref=e1229]: zoom_in
+              - generic [ref=e1230]: Thầy Trương Cảnh Thắng — Đào tạo học viên AI Marketing
+      - generic [ref=e1231]:
+        - generic [ref=e1233]:
+          - heading "Sản Phẩm Coloring Book Thực Tế" [level=2] [ref=e1234]
+          - paragraph [ref=e1235]: Được tạo hoàn toàn bằng AI Agent — đang bán trên Amazon KDP
+        - generic [ref=e1236]:
+          - button "Adorable Owls Coloring Book — tạo bởi AI Agent zoom_in Adorable Owls — Bold and Easy Coloring Book" [ref=e1238] [cursor=pointer]:
+            - img "Adorable Owls Coloring Book — tạo bởi AI Agent" [ref=e1239]
+            - generic [ref=e1241]:
+              - generic [ref=e1242]: zoom_in
+              - generic [ref=e1243]: Adorable Owls — Bold and Easy Coloring Book
+          - button "4th of July Coloring Book — bán trên Amazon KDP zoom_in 4th of July — Kids Coloring Book (Ages 3-7)" [ref=e1245] [cursor=pointer]:
+            - img "4th of July Coloring Book — bán trên Amazon KDP" [ref=e1246]
+            - generic [ref=e1248]:
+              - generic [ref=e1249]: zoom_in
+              - generic [ref=e1250]: 4th of July — Kids Coloring Book (Ages 3-7)
+    - generic [ref=e1252]:
+      - generic [ref=e1254]:
+        - generic [ref=e1255]:
+          - generic [ref=e1256]: event
+          - text: ĐÀ LẠT · 29 – 30 – 31/05
+        - heading "Lịch Trình 3 Ngày" [level=2] [ref=e1257]
+        - paragraph [ref=e1258]: Mastermind / huấn luyện thực chiến / demo hệ thống / thực hành / hỏi đáp chuyên sâu — cá nhân hoá theo từng mô hình.
+      - generic [ref=e1259]:
+        - generic [ref=e1261]:
+          - generic [ref=e1262]: NGÀY 1 — THỨ 5, 29/05
+          - generic [ref=e1263]: Tư duy AIOS & tái cấu trúc
+          - generic [ref=e1264]: 08:30 — 17:30
+          - generic [ref=e1265]:
+            - paragraph [ref=e1266]:
+              - generic [ref=e1267]: check
+              - text: Bức tranh lớn AI Agent + AIOS
+            - paragraph [ref=e1268]:
+              - generic [ref=e1269]: check
+              - text: Phân tích doanh nghiệp 12 lớp
+            - paragraph [ref=e1270]:
+              - generic [ref=e1271]: check
+              - text: Vẽ bản đồ mô hình hiện tại
+            - paragraph [ref=e1272]:
+              - generic [ref=e1273]: check
+              - text: Chọn khu vực AI hoá trước
+        - generic [ref=e1275]:
+          - generic [ref=e1276]: NGÀY 2 — THỨ 6, 30/05
+          - generic [ref=e1277]: Marketing · Sales · Channel Growth
+          - generic [ref=e1278]: 08:30 — 17:30
+          - generic [ref=e1279]:
+            - paragraph [ref=e1280]:
+              - generic [ref=e1281]: check
+              - text: Xây Marketing Agent đa kênh
+            - paragraph [ref=e1282]:
+              - generic [ref=e1283]: check
+              - text: Sales Agent + content engine
+            - paragraph [ref=e1284]:
+              - generic [ref=e1285]: check
+              - text: Workflow nội dung → chuyển đổi
+            - paragraph [ref=e1286]:
+              - generic [ref=e1287]: check
+              - text: VibeCoding Business thực hành
+        - generic [ref=e1289]:
+          - generic [ref=e1290]: NGÀY 3 — THỨ 7, 31/05
+          - generic [ref=e1291]: Affiliate · KDP · POD · Quốc tế
+          - generic [ref=e1292]: 08:30 — 17:30
+          - generic [ref=e1293]:
+            - paragraph [ref=e1294]:
+              - generic [ref=e1295]: check
+              - text: Showcase hệ thống KDP / POD
+            - paragraph [ref=e1296]:
+              - generic [ref=e1297]: check
+              - text: AI Affiliate Content Engine
+            - paragraph [ref=e1298]:
+              - generic [ref=e1299]: check
+              - text: Roadmap 30 ngày sau camp
+            - paragraph [ref=e1300]:
+              - generic [ref=e1301]: check
+              - text: Q&A + Freedom Partnership
+      - generic [ref=e1303]:
+        - link "ĐĂNG KÝ GIỮ CHỖ arrow_forward" [ref=e1304] [cursor=pointer]:
+          - /url: "#register"
+          - text: ĐĂNG KÝ GIỮ CHỖ
+          - generic [ref=e1305]: arrow_forward
+        - paragraph [ref=e1306]: Chỉ 60 ghế cho cả 3 ngày mastermind
+    - generic [ref=e1308]:
+      - generic [ref=e1310]:
+        - generic [ref=e1311]:
+          - generic [ref=e1312]: inventory_2
+          - text: GIÁ TRỊ TỔNG CỘNG TRÊN 68 TRIỆU
+        - heading "Tổng Giá Trị Bạn Nhận Trong Agent Camp" [level=2] [ref=e1313]
+        - paragraph [ref=e1314]: Nhưng bạn không cần đầu tư mức đó để tham gia — xem giá Early Bird bên dưới.
+      - generic [ref=e1315]:
+        - generic [ref=e1317]:
+          - generic [ref=e1319]: school
+          - generic [ref=e1320]:
+            - generic [ref=e1322]: GIÁ TRỊ 01
+            - heading "3 ngày huấn luyện chuyên sâu về AIOS" [level=3] [ref=e1323]
+            - paragraph [ref=e1324]: Học trực tiếp tư duy, chiến lược, mô hình và lộ trình ứng dụng AI Agent vào doanh nghiệp.
+          - generic [ref=e1326]: 15.000.000đ
+        - generic [ref=e1328]:
+          - generic [ref=e1330]: psychology
+          - generic [ref=e1331]:
+            - generic [ref=e1333]: GIÁ TRỊ 02
+            - heading "Hệ thống tư duy tái cấu trúc doanh nghiệp" [level=3] [ref=e1334]
+            - paragraph [ref=e1335]: Nhìn lại doanh nghiệp, xác định điểm nghẽn và chọn khu vực nên AI hoá trước.
+          - generic [ref=e1337]: 10.000.000đ
+        - generic [ref=e1339]:
+          - generic [ref=e1341]: dashboard
+          - generic [ref=e1342]:
+            - generic [ref=e1344]: GIÁ TRỊ 03
+            - heading "Showcase 8 hệ thống Agent thực tế" [level=3] [ref=e1345]
+            - paragraph [ref=e1346]: Hệ thống Agent cho marketing, sales, channel growth, branding, affiliate, KDP/POD, business strategy, partnership.
+          - generic [ref=e1348]: 20.000.000đ
+        - generic [ref=e1350]:
+          - generic [ref=e1352]: code_blocks
+          - generic [ref=e1353]:
+            - generic [ref=e1355]: GIÁ TRỊ 04
+            - heading "Framework VibeCoding Business" [level=3] [ref=e1356]
+            - paragraph [ref=e1357]: Mô tả ý tưởng kinh doanh, quy trình và hệ thống để AI hỗ trợ triển khai nhanh hơn — không cần biết code.
+          - generic [ref=e1359]: 8.000.000đ
+        - generic [ref=e1361]:
+          - generic [ref=e1363]: forum
+          - generic [ref=e1364]:
+            - generic [ref=e1366]: GIÁ TRỊ 05
+            - heading "Hỏi đáp cá nhân hoá theo mô hình của bạn" [level=3] [ref=e1367]
+            - paragraph [ref=e1368]: Mang bài toán thật vào để được phân tích, gợi ý và định hướng triển khai cho chính mô hình kinh doanh của bạn.
+          - generic [ref=e1370]: 15.000.000đ
+        - generic [ref=e1372]:
+          - generic [ref=e1374]: diversity_3
+          - generic [ref=e1375]:
+            - generic [ref=e1377]: GIÁ TRỊ 06
+            - heading "Kết nối cộng đồng tinh hoa" [level=3] [ref=e1378]
+            - paragraph [ref=e1379]: Nhóm người đang nghiêm túc đi vào AI Agent, mô hình tinh gọn, thị trường quốc tế, Affiliate, KDP/POD, Freedom Builders.
+          - generic [ref=e1381]: Không thể đo bằng tiền
+      - generic [ref=e1385]:
+        - generic [ref=e1386]:
+          - generic [ref=e1387]: Tổng giá trị quy đổi
+          - generic [ref=e1388]: Trên 68.000.000đ
+        - generic [ref=e1390]:
+          - generic [ref=e1391]: Giá Early Bird
+          - generic [ref=e1392]: 12.868.000đ
+          - generic [ref=e1393]: Hết hạn 20/05 · giới hạn 60 ghế
+    - generic [ref=e1395]:
+      - generic [ref=e1397]:
+        - generic [ref=e1398]:
+          - generic [ref=e1399]: redeem
+          - text: QUÀ TẶNG KÈM TRỊ GIÁ TRÊN 12 TRIỆU
+        - heading "5 Bonus ĐẶC BIỆT" [level=2] [ref=e1400]
+        - paragraph [ref=e1401]: Bonus dành riêng cho học viên đăng ký Agent Camp
+      - generic [ref=e1402]:
+        - generic [ref=e1405]:
+          - generic [ref=e1407]: schema
+          - generic [ref=e1408]:
+            - generic [ref=e1409]: Trị giá 2,500,000đ
+            - heading "AIOS Business Mapping Canvas" [level=3] [ref=e1410]
+            - paragraph [ref=e1411]: "Bộ khung vẽ doanh nghiệp theo 12 lớp: sản phẩm, khách hàng, thị trường, marketing, sales, kênh tăng trưởng, vận hành, đội nhóm, dữ liệu, đối tác, điểm nghẽn, cơ hội Agent."
+        - generic [ref=e1414]:
+          - generic [ref=e1416]: view_list
+          - generic [ref=e1417]:
+            - generic [ref=e1418]: Trị giá 3,000,000đ
+            - heading "Bộ Mẫu Tư Duy 20 Agent Cho Doanh Nghiệp" [level=3] [ref=e1419]
+            - paragraph [ref=e1420]: "Gợi ý 20 Agent triển khai được ngay: Market Research, Customer Insight, Content Strategy, Sales Script, Offer Builder, Affiliate Research, KDP Niche Hunter, Partnership, Business Strategy..."
+        - generic [ref=e1423]:
+          - generic [ref=e1425]: book
+          - generic [ref=e1426]:
+            - generic [ref=e1427]: Trị giá 1,500,000đ
+            - heading "Agent Camp Workbook" [level=3] [ref=e1428]
+            - paragraph [ref=e1429]: Tài liệu thực hành — ghi lại bài toán hiện tại, điểm nghẽn, kênh ưu tiên, quy trình cần AI hoá, Agent cần xây, workflow cần thiết kế, kế hoạch sau chương trình.
+        - generic [ref=e1432]:
+          - generic [ref=e1434]: smart_toy
+          - generic [ref=e1435]:
+            - generic [ref=e1436]: Trị giá 5,000,000đ
+            - heading "Bộ 5 Agents — Từ Ý Tưởng Đến Khách Hàng" [level=3] [ref=e1437]
+            - paragraph [ref=e1438]: "5 Agent chạy full funnel: (1) Research Agent nghiên cứu ý tưởng + ngách · (2) Competitor Agent phân tích đối thủ · (3) Offer Agent tạo offer Hormozi-style · (4) Landing Page Agent tự động build trang + tích hợp thanh toán + CRM · (5) Content Ads Agent lên chiến lược content + quảng cáo."
+      - generic [ref=e1442]:
+        - generic [ref=e1444]: flag
+        - generic [ref=e1445]: BONUS 5 ĐẶC BIỆT
+        - heading "Roadmap 30 Ngày Sau Agent Camp" [level=3] [ref=e1446]
+        - paragraph [ref=e1447]: Khung định hướng triển khai sau chương trình — tránh tình trạng học xong nhiều ý tưởng nhưng không biết bắt đầu từ đâu. Mỗi tuần một mốc, mỗi mốc một Agent.
+    - generic [ref=e1449]:
+      - generic [ref=e1451]:
+        - generic [ref=e1452]:
+          - generic [ref=e1453]: payments
+          - text: MỨC ĐẦU TƯ THAM GIA
+        - heading "3 Tier Theo Giai Đoạn" [level=2] [ref=e1454]
+        - paragraph [ref=e1455]: Người quyết định sớm có mức đầu tư tốt hơn. Hôm nay là Early Bird — tiết kiệm 14 triệu so với giá public.
+      - generic [ref=e1456]:
+        - generic [ref=e1458]:
+          - generic [ref=e1459]: ⚡ Đang áp dụng hôm nay
+          - generic [ref=e1460]: EARLY BIRD
+          - generic [ref=e1461]: 16 – 20/05
+          - generic [ref=e1462]:
+            - generic [ref=e1463]: 12.868.000đ
+            - generic [ref=e1464]: Tiết kiệm 14.000.000đ
+          - paragraph [ref=e1465]: Dành cho anh chị đăng ký sớm, quyết định nhanh và muốn giữ chỗ trong nhóm đầu tiên.
+          - link "GIỮ CHỖ NGAY arrow_forward" [ref=e1466] [cursor=pointer]:
+            - /url: "#register"
+            - text: GIỮ CHỖ NGAY
+            - generic [ref=e1467]: arrow_forward
+        - generic [ref=e1469]:
+          - generic [ref=e1470]: GIAI ĐOẠN 2
+          - generic [ref=e1471]: 20 – 25/05
+          - generic [ref=e1473]: 19.868.000đ
+          - paragraph [ref=e1474]: Cho anh chị đăng ký trong giai đoạn tiếp theo trước khi chương trình quay về giá public.
+          - link "Đăng ký arrow_forward" [ref=e1475] [cursor=pointer]:
+            - /url: "#register"
+            - text: Đăng ký
+            - generic [ref=e1476]: arrow_forward
+        - generic [ref=e1478]:
+          - generic [ref=e1479]: GIÁ PUBLIC
+          - generic [ref=e1480]: Sau 25/05
+          - generic [ref=e1482]: 26.868.000đ
+          - paragraph [ref=e1483]: Mức giá chính thức của Agent Camp khi giai đoạn Early Bird kết thúc.
+          - link "Đăng ký arrow_forward" [ref=e1484] [cursor=pointer]:
+            - /url: "#register"
+            - text: Đăng ký
+            - generic [ref=e1485]: arrow_forward
+      - generic [ref=e1487]:
+        - generic [ref=e1488]:
+          - generic [ref=e1489]: groups
+          - generic [ref=e1490]: Số lượng giới hạn
+          - generic [ref=e1491]: Khoảng 60 ghế để giữ chất lượng mastermind
+        - generic [ref=e1492]:
+          - generic [ref=e1493]: trending_up
+          - generic [ref=e1494]: Giá tăng theo giai đoạn
+          - generic [ref=e1495]: Càng đăng ký sớm càng đầu tư ít
+        - generic [ref=e1496]:
+          - generic [ref=e1497]: psychology
+          - generic [ref=e1498]: Có thời gian chuẩn bị bài toán
+          - generic [ref=e1499]: Đăng ký sớm → chuẩn bị mô hình kinh doanh kỹ hơn
+        - generic [ref=e1500]:
+          - generic [ref=e1501]: rocket_launch
+          - generic [ref=e1502]: AI Agent đang thay đổi nhanh
+          - generic [ref=e1503]: Người hiểu sớm sẽ có lợi thế thật
+    - generic [ref=e1509]:
+      - generic [ref=e1510]:
+        - generic [ref=e1511]: ĐẾM NGƯỢC ĐẾN AGENT CAMP
+        - heading "Agent Camp — Ba Vì — 29/05/2026" [level=3] [ref=e1513]
+      - generic [ref=e1514]:
+        - generic [ref=e1515]:
+          - generic [ref=e1517]: "08"
+          - generic [ref=e1518]: Ngày
+        - generic [ref=e1519]:
+          - generic [ref=e1521]: "15"
+          - generic [ref=e1522]: Giờ
+        - generic [ref=e1523]:
+          - generic [ref=e1525]: "59"
+          - generic [ref=e1526]: Phút
+        - generic [ref=e1527]:
+          - generic [ref=e1529]: "10"
+          - generic [ref=e1530]: Giây
+      - generic [ref=e1531]:
+        - generic [ref=e1532]:
+          - generic [ref=e1533]: 38 / 60 ghế đã giữ chỗ
+          - generic [ref=e1534]: Chỉ còn 22 ghế!
+        - paragraph [ref=e1537]: Mastermind giới hạn 60 ghế — đảm bảo chất lượng tương tác và cá nhân hoá
+      - generic [ref=e1539]:
+        - generic [ref=e1540]:
+          - heading "Đăng ký giữ chỗ Agent Camp" [level=4] [ref=e1541]
+          - paragraph [ref=e1542]: Điền thông tin để giữ chỗ + nhận hướng dẫn đặt cọc và tài liệu chuẩn bị trước camp
+        - generic [ref=e1543]:
+          - generic [ref=e1544]:
+            - text: Họ và tên *
+            - textbox "Họ và tên *" [ref=e1545]:
+              - /placeholder: Nguyễn Văn A
+          - generic [ref=e1546]:
+            - text: Số điện thoại *
+            - textbox "Số điện thoại *" [ref=e1547]:
+              - /placeholder: "0901234567"
+        - generic [ref=e1548]:
+          - text: Email *
+          - textbox "Email *" [ref=e1549]:
+            - /placeholder: ban@email.com
+        - generic [ref=e1550]:
+          - text: Chọn gói vé *
+          - combobox "Chọn gói vé *" [ref=e1551]:
+            - option "Early Bird — 12.868.000đ (tiết kiệm 14 triệu, hết hạn 20/05)" [selected]
+            - option "Giai đoạn 2 — 19.868.000đ (20-25/05)"
+            - option "Giá public — 26.868.000đ (sau 25/05)"
+            - option "Elite ưu tiên — 3.868.000đ (chỉ dành cho thành viên Elite)"
+        - button "GIỮ CHỖ + ĐẶT CỌC arrow_forward" [ref=e1552]:
+          - text: GIỮ CHỖ + ĐẶT CỌC
+          - generic [ref=e1553]: arrow_forward
+        - paragraph [ref=e1554]: Sau khi đăng ký bạn sẽ nhận hướng dẫn đặt cọc VietQR + link nhóm Zalo Agent Camp.
+    - generic [ref=e1556]:
+      - generic [ref=e1558]:
+        - generic [ref=e1559]:
+          - generic [ref=e1560]: help
+          - text: CÂU HỎI THƯỜNG GẶP
+        - heading "Thắc Mắc Trước Khi Đăng Ký?" [level=2] [ref=e1561]
+      - generic [ref=e1562]:
+        - generic [ref=e1564]:
+          - button "Tôi chưa giỏi công nghệ có tham gia được không? remove" [ref=e1565] [cursor=pointer]:
+            - generic [ref=e1566]: Tôi chưa giỏi công nghệ có tham gia được không?
+            - generic [ref=e1567]: remove
+          - paragraph [ref=e1569]: Có. Agent Camp không yêu cầu bạn phải là lập trình viên. Chương trình tập trung vào tư duy ứng dụng AI Agent vào mô hình kinh doanh. Tuy nhiên, bạn cần có tinh thần thực hành và sẵn sàng thay đổi cách làm việc cũ.
+        - generic [ref=e1571]:
+          - button "Tôi chưa có doanh nghiệp lớn, chỉ đang kinh doanh cá nhân thì có phù hợp không? add" [ref=e1572] [cursor=pointer]:
+            - generic [ref=e1573]: Tôi chưa có doanh nghiệp lớn, chỉ đang kinh doanh cá nhân thì có phù hợp không?
+            - generic [ref=e1574]: add
+          - paragraph [ref=e1575]: Rất phù hợp. Chương trình hợp với người kinh doanh cá nhân, chuyên gia, coach, nhà đào tạo, affiliate hoặc người đang xây mô hình tinh gọn. Đây là nhóm có lợi thế vì có thể ứng dụng nhanh, thử nghiệm nhanh và thay đổi nhanh.
+        - generic [ref=e1577]:
+          - button "Tôi đang làm Affiliate, KDP, POD hoặc TikTok US thì có phù hợp không? add" [ref=e1578] [cursor=pointer]:
+            - generic [ref=e1579]: Tôi đang làm Affiliate, KDP, POD hoặc TikTok US thì có phù hợp không?
+            - generic [ref=e1580]: add
+          - paragraph [ref=e1581]: Rất phù hợp. Ngày 3 của camp có các phần showcase và định hướng xây hệ thống Agent cho các mô hình có khả năng nhân bản như AI Affiliate Content Engine, Amazon KDP, POD và kênh bán hàng bằng AI.
+        - generic [ref=e1583]:
+          - button "Đây là khoá học hay mastermind? add" [ref=e1584] [cursor=pointer]:
+            - generic [ref=e1585]: Đây là khoá học hay mastermind?
+            - generic [ref=e1586]: add
+          - paragraph [ref=e1587]: Agent Camp là sự kết hợp giữa huấn luyện, mastermind, demo hệ thống, thực hành và hỏi đáp chuyên sâu. Bạn không chỉ nghe bài giảng — bạn được định hướng cách áp dụng vào bài toán thật của doanh nghiệp mình.
+        - generic [ref=e1589]:
+          - button "Sau chương trình tôi có xây được hệ thống hoàn chỉnh ngay không? add" [ref=e1590] [cursor=pointer]:
+            - generic [ref=e1591]: Sau chương trình tôi có xây được hệ thống hoàn chỉnh ngay không?
+            - generic [ref=e1592]: add
+          - paragraph [ref=e1593]: Mục tiêu của 3 ngày là giúp bạn có bản đồ, tư duy, quy trình, framework và định hướng triển khai rõ ràng. Một số phần bạn có thể bắt đầu xây ngay trong hoặc sau chương trình. Để xây AIOS hoàn chỉnh cho doanh nghiệp, bạn sẽ cần tiếp tục triển khai, đo lường và tối ưu — Agent Camp là điểm khởi động mạnh để đi đúng hướng.
+        - generic [ref=e1595]:
+          - button "Vì sao số lượng chỉ giới hạn khoảng 60 người? add" [ref=e1596] [cursor=pointer]:
+            - generic [ref=e1597]: Vì sao số lượng chỉ giới hạn khoảng 60 người?
+            - generic [ref=e1598]: add
+          - paragraph [ref=e1599]: Vì chương trình cần chất lượng tương tác. Nếu quá đông, việc hỏi đáp, phân tích và cá nhân hoá cho từng nhóm sẽ bị giảm. Agent Camp không phải lớp học đại trà — đây là chương trình dành cho nhóm người nghiêm túc, muốn đi sâu và thực chiến.
+        - generic [ref=e1601]:
+          - button "Thành viên Elite có quyền lợi gì? add" [ref=e1602] [cursor=pointer]:
+            - generic [ref=e1603]: Thành viên Elite có quyền lợi gì?
+            - generic [ref=e1604]: add
+          - paragraph [ref=e1605]: Thành viên Elite có mức ưu tiên đặc biệt 3.868.000đ. Đây là quyền lợi riêng cho nhóm Elite vì anh chị đang trong lộ trình đồng hành sâu hơn với hệ sinh thái Freedom Builders và chiến lược xây dựng AIOS.
+    - generic [ref=e1609]:
+      - generic [ref=e1610]:
+        - generic [ref=e1611]:
+          - generic [ref=e1612]: trending_up
+          - text: 3 NĂM TỚI · 2 LOẠI DOANH NGHIỆP
+        - heading "Bạn Chọn Đứng Bên Doanh Nghiệp AIOS Hay Bên Còn Lại?" [level=2] [ref=e1613]:
+          - text: Bạn Chọn Đứng Bên Doanh Nghiệp AIOS
+          - text: Hay Bên Còn Lại?
+        - paragraph [ref=e1614]: Trong 3 năm tới, doanh nghiệp chia làm 2 nhóm. Một nhóm vẫn vận hành thủ công, nhiều người, nhiều chi phí. Một nhóm bắt đầu xây hệ điều hành AIOS — tinh gọn, nhanh, có hệ thống, ứng dụng AI Agent vào marketing, bán hàng, xây kênh và vận hành.
+      - generic [ref=e1616]:
+        - generic [ref=e1617]:
+          - generic [ref=e1618]: Thời gian
+          - generic [ref=e1619]: 29 – 30 – 31/05
+        - generic [ref=e1620]:
+          - generic [ref=e1621]: Địa điểm
+          - generic [ref=e1622]: Ba Vì
+        - generic [ref=e1623]:
+          - generic [ref=e1624]: Số lượng
+          - generic [ref=e1625]: ~60 ghế
+        - generic [ref=e1626]:
+          - generic [ref=e1627]: Early Bird
+          - generic [ref=e1628]: 12.868.000đ
+      - generic [ref=e1629]:
+        - generic [ref=e1630]: warning
+        - generic [ref=e1631]: Chỉ còn 22 / 60 ghế · Early Bird hết hạn 20/05
+      - generic [ref=e1632]:
+        - link "ĐĂNG KÝ AGENT CAMP — GIỮ CHỖ NGAY rocket_launch" [ref=e1633] [cursor=pointer]:
+          - /url: "#register"
+          - generic [ref=e1634]: ĐĂNG KÝ AGENT CAMP —
+          - text: GIỮ CHỖ NGAY
+          - generic [ref=e1635]: rocket_launch
+        - paragraph [ref=e1636]: Tôi muốn xây AIOS cho doanh nghiệp của mình
+  - contentinfo [ref=e1637]:
+    - generic [ref=e1638]:
+      - generic [ref=e1639]: AI Agent Company
+      - generic [ref=e1640]:
+        - link "YouTube" [ref=e1641] [cursor=pointer]:
+          - /url: https://www.youtube.com/@theaifirst
+        - link "Facebook" [ref=e1642] [cursor=pointer]:
+          - /url: https://www.facebook.com/theaifirst
+        - link "TikTok" [ref=e1643] [cursor=pointer]:
+          - /url: "#"
+      - paragraph [ref=e1644]: © 2026 AI Agent Company. All rights reserved.
+  - button "Mở chat tư vấn" [ref=e1645]:
+    - generic [ref=e1646]: chat
+  - button "Open Next.js Dev Tools" [ref=e1652] [cursor=pointer]:
+    - img [ref=e1653]
+  - alert [ref=e1656]

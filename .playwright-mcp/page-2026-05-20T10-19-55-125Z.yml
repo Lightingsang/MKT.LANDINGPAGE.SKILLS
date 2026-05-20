@@ -1,0 +1,74 @@
+- generic [ref=e20]:
+  - generic [ref=e21]:
+    - complementary [ref=e22]:
+      - generic [ref=e23]:
+        - generic [ref=e24]: AC
+        - generic [ref=e25]:
+          - generic [ref=e26]: Agent Camp
+          - generic [ref=e27]: Quản trị đơn hàng
+      - navigation [ref=e28]:
+        - button "📊 Tổng quan" [ref=e29] [cursor=pointer]:
+          - generic [ref=e30]: 📊
+          - generic [ref=e31]: Tổng quan
+        - button "👥 Khách hàng" [ref=e32] [cursor=pointer]:
+          - generic [ref=e33]: 👥
+          - generic [ref=e34]: Khách hàng
+        - button "✉️ Email marketing" [ref=e35] [cursor=pointer]:
+          - generic [ref=e36]: ✉️
+          - generic [ref=e37]: Email marketing
+      - button "Thoát" [ref=e38] [cursor=pointer]
+    - generic [ref=e39]:
+      - generic [ref=e188]:
+        - heading "Email marketing" [level=1] [ref=e189]
+        - generic [ref=e190]: Soạn và gửi chiến dịch email cho khách Agent Camp
+      - generic [ref=e191]:
+        - generic [ref=e192]:
+          - generic [ref=e193]: Soạn chiến dịch mới
+          - generic [ref=e194]:
+            - generic [ref=e195]:
+              - generic [ref=e196]: Tên chiến dịch (nội bộ)
+              - textbox "Tên chiến dịch (nội bộ)" [ref=e197]:
+                - /placeholder: Khuyến mãi giai đoạn 2
+            - generic [ref=e198]:
+              - generic [ref=e199]: Tiêu đề email (khách thấy)
+              - textbox "Tiêu đề email (khách thấy)" [ref=e200]:
+                - /placeholder: Anh/chị giữ chỗ Agent Camp tháng 5 nhé
+            - generic [ref=e201]:
+              - generic [ref=e202]: Tên người gửi (tuỳ chọn)
+              - textbox "Tên người gửi (tuỳ chọn)" [ref=e203]:
+                - /placeholder: Đội ngũ Agent Camp
+            - generic [ref=e204]:
+              - generic [ref=e205]: Đối tượng nhận
+              - generic [ref=e206]:
+                - generic [ref=e207] [cursor=pointer]:
+                  - radio "Đối tượng nhận Tất cả khách hàng Đã thanh toán Chưa thanh toán (nhắc chuyển khoản) Theo ngày gần nhất" [checked] [ref=e208]
+                  - text: Tất cả khách hàng
+                - generic [ref=e209] [cursor=pointer]:
+                  - radio "Đã thanh toán" [ref=e210]
+                  - text: Đã thanh toán
+                - generic [ref=e211] [cursor=pointer]:
+                  - radio "Chưa thanh toán (nhắc chuyển khoản)" [ref=e212]
+                  - text: Chưa thanh toán (nhắc chuyển khoản)
+                - generic [ref=e213] [cursor=pointer]:
+                  - radio "Theo ngày gần nhất" [ref=e214]
+                  - text: Theo ngày gần nhất
+            - generic [ref=e215]:
+              - generic [ref=e216]: Nội dung email
+              - generic [ref=e217]:
+                - 'button "Nội dung email HTML Dán mã HTML. {{name}} để chèn tên khách. Đoạn HTML rời sẽ tự bọc khung email; HTML đầy đủ (<html>) giữ nguyên." [ref=e218] [cursor=pointer]': Văn bản thường
+                - button "HTML" [active] [ref=e219] [cursor=pointer]
+              - 'textbox "<p>Chào {{name}},</p> <p>Em vừa cập nhật chương trình Agent Camp tháng 5…</p> <p><a href=\"https://...\">Xem chi tiết</a></p>" [ref=e220]':
+                - /placeholder: "<p>Chào {{name}},</p>\n<p>Em vừa cập nhật chương trình Agent Camp tháng 5…</p>\n<p><a href=\"https://...\">Xem chi tiết</a></p>"
+              - generic [ref=e221]: "Dán mã HTML. {{name}} để chèn tên khách. Đoạn HTML rời sẽ tự bọc khung email; HTML đầy đủ (<html>) giữ nguyên."
+            - generic [ref=e222]:
+              - button "👁 Xem trước" [disabled] [ref=e223] [cursor=pointer]
+              - button "✉ Gửi ngay" [ref=e224] [cursor=pointer]
+        - generic [ref=e225]:
+          - generic [ref=e226]: Lịch sử chiến dịch
+          - generic [ref=e227]: Chưa có chiến dịch nào. Soạn bên trái để bắt đầu.
+  - button "Mở chat tư vấn" [ref=e8]:
+    - generic [ref=e9]: chat
+  - button "Open Next.js Dev Tools" [ref=e15] [cursor=pointer]:
+    - img [ref=e16]
+  - alert [ref=e19]
+  - generic [ref=e186]: "0"
