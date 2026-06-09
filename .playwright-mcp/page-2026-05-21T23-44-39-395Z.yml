@@ -1,0 +1,10 @@
+- generic:
+  - generic [ref=e2]:
+    - generic [ref=e3]: 📊
+    - heading "Trang quản trị" [level=2] [ref=e4]
+    - paragraph [ref=e5]: Nhập mã để xem dashboard và quản lý chiến dịch email.
+    - textbox "Mã quản trị" [active] [ref=e6]
+    - button "Đăng nhập" [disabled] [ref=e7] [cursor=pointer]
+  - button "Mở chatbot hỗ trợ" [ref=e8]:
+    - img [ref=e9]
+  - alert [ref=e11]

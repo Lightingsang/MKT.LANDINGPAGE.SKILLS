@@ -1,0 +1,13 @@
+- generic [active]:
+  - generic [ref=e2]:
+    - generic [ref=e3]: 📊
+    - heading "Trang quản trị" [level=2] [ref=e4]
+    - paragraph [ref=e5]: Nhập mã để xem dashboard và quản lý chiến dịch email.
+    - textbox "Mã quản trị" [ref=e6]: wrongpass
+    - generic [ref=e21]: Sai mã, anh/chị thử lại.
+    - button "Đăng nhập" [ref=e7] [cursor=pointer]
+  - button "Mở chatbot hỗ trợ" [ref=e8]:
+    - img [ref=e9]
+  - button "Open Next.js Dev Tools" [ref=e17] [cursor=pointer]:
+    - img [ref=e18]
+  - alert [ref=e11]
