@@ -1,35 +1,28 @@
 # BIZ.MKT.OS — Pipeline đóng gói sản phẩm số từ ý tưởng → khách hàng nhận email
 
-> **Một "agent" gồm 10 skill chuyên dụng**, chạy tuần tự để biến **1 ý tưởng sản phẩm** thành **1 sales funnel hoàn chỉnh** đang nhận lead thật: research thị trường → đóng gói offer → nâng cấp copy → build landing page Next.js → cài đặt thanh toán tự động VietQR → tích hợp AI chatbot hỗ trợ 24/7 → gửi email tự động chăm sóc → gửi thông báo đơn hàng qua Telegram → tạo admin dashboard quản lý đơn → deploy live lên Vercel.
+> **Một "agent" gồm 13 skill chuyên dụng** (+ 1 deprecated), chạy tuần tự để biến **1 ý tưởng sản phẩm** thành **1 sales funnel hoàn chỉnh** đang nhận lead & tiền thật: research thị trường → đóng gói offer → nâng cấp copy → build landing page Next.js → thanh toán tự động VietQR → chatbot AI 24/7 → email auto-responder → báo đơn Telegram → admin CRM dashboard → deploy live. Sau đó nâng cấp tuỳ chọn: đăng nhập Google cho admin, hệ thống affiliate, đa ngôn ngữ.
 
-Hệ thống được thiết kế cho **thị trường Việt Nam**: tiếng Việt thuần (xưng anh/chị), giá VND charm pricing, mobile-first traffic, voice Hoàng nếu có video.
+Hệ thống thiết kế cho **thị trường Việt Nam**: tiếng Việt thuần (xưng anh/chị), giá VND charm pricing, mobile-first traffic.
 
 ---
 
 ## Mục lục
 
 - [Triết lý vận hành](#triết-lý-vận-hành)
-- [Sơ đồ pipeline](#sơ-đồ-pipeline)
+- [Bản đồ skill (13 + 1)](#bản-đồ-skill-13--1)
+- [Sơ đồ pipeline (build-time)](#sơ-đồ-pipeline-build-time)
+- [Sơ đồ runtime thanh toán → webhook](#sơ-đồ-runtime-thanh-toán--webhook)
 - [Naming convention output](#naming-convention-output)
-- [10 bước chi tiết](#10-bước-chi-tiết)
-  - [Bước 1 — Market Research](#bước-1--market-research-marketresearch)
-  - [Bước 2 — Đóng gói Offer](#bước-2--đóng-gói-offer-bizofferalexhormozi)
-  - [Bước 3 — Nâng cấp Copy](#bước-3--nâng-cấp-copy-bizsalespagecopy)
-  - [Bước 4 — Build Landing Page](#bước-4--build-landing-page-uiuxpromax)
-  - [Bước 5 — Tích hợp Thanh toán VietQR](#bước-5--tích-hợp-thanh-toán-vietqr-bizsetupsepaypayment)
-  - [Bước 6 — Cài Chatbot](#bước-6--cài-chatbot-biznextjschatbotopenrouter)
-  - [Bước 7 — Setup Email Auto-Responder](#bước-7--setup-email-auto-responder-bizemailsetup)
-  - [Bước 8 — Setup Thông báo Telegram](#bước-8--setup-thông-báo-telegram-biztelegrampaymentnotify)
-  - [Bước 9 — Tạo Admin Dashboard](#bước-9--tạo-admin-dashboard-bizadminleadsdashboard)
-  - [Bước 10 — Deploy Production](#bước-10--deploy-production-bizdeployvercel)
-- [Hướng dẫn Cơ sở Dữ liệu & Triển khai (Supabase & Vercel CLI)](#hướng-dẫn-cơ-sở-dữ-liệu--triển-khai-supabase--vercel-cli)
-  - [1. Hướng dẫn Triển khai với Vercel CLI](#1-hướng-dẫn-triển-khai-với-vercel-cli)
-  - [2. Kết nối CSDL Supabase (Postgres) cho Landing Page & Admin Dashboard](#2-kết-nối-csdl-supabase-postgres-cho-landing-page--admin-dashboard)
-  - [3. Hướng dẫn cài đặt Supabase MCP Server](#3-hướng-dẫn-cài-đặt-supabase-mcp-server)
+- [10 bước core chi tiết](#10-bước-core-chi-tiết)
+- [Lớp mở rộng (post-funnel)](#lớp-mở-rộng-post-funnel)
+  - [Sơ đồ phụ thuộc lớp mở rộng](#sơ-đồ-phụ-thuộc-lớp-mở-rộng)
+  - [11 — Google Auth cho /admin](#11--google-auth-cho-admin-biz-admin-google-auth)
+  - [12 — Hệ thống Affiliate](#12--hệ-thống-affiliate-biz-affiliate-system)
+  - [13 — Đa ngôn ngữ Landing Page](#13--đa-ngôn-ngữ-landing-page-biz-i18n-landing-page)
+- [Hướng dẫn Supabase & Vercel CLI](#hướng-dẫn-supabase--vercel-cli)
 - [Checklist Go-Live](#checklist-go-live)
-- [Skills đã bị deprecated](#skills-đã-bị-deprecated)
+- [Skills đã deprecated](#skills-đã-deprecated)
 - [FAQ vận hành](#faq-vận-hành)
-- [Tham chiếu file thực tế (case study)](#tham-chiếu-file-thực-tế-case-study)
 
 ---
 
@@ -37,13 +30,39 @@ Hệ thống được thiết kế cho **thị trường Việt Nam**: tiếng V
 
 1. **Một skill một việc** — mỗi bước là 1 slash command đơn nhiệm, output của bước trước là input của bước sau. Không monolith.
 2. **Artifact-first** — mỗi bước ghi ra file có cấu trúc (`.md` để người đọc, `.json` để pipeline downstream parse). Không có file = bước chưa hoàn thành.
-3. **Checkpoint con người** — sau mỗi bước critical (offer, copy, landing page) **user duyệt trước** rồi mới chạy bước kế. Skill không auto-chain.
+3. **Checkpoint con người** — sau mỗi bước critical (offer, copy, landing page, email draft) **user duyệt trước** rồi mới chạy bước kế. Skill không auto-chain.
 4. **Resume an toàn** — pipeline có thể bắt đầu/dừng/tiếp ở bất kỳ bước nào miễn artifact đầu vào có đủ. Đã có `02-offer.json` → nhảy thẳng vào bước 3.
-5. **Mobile-first VN** — mọi landing page bắt buộc form đăng ký (tên/SĐT/email) + responsive web+tablet+mobile.
+5. **Local-first → deploy 1 phát** — build + chatbot + email + payment + admin đều làm trên `localhost:3000`, test xong mới `/biz-deploy-vercel` một lần cho sạch.
+6. **Mobile-first VN** — mọi landing page bắt buộc form đăng ký (tên/SĐT/email, regex `^(0|\+84)[0-9]{9}$`) + responsive web+tablet+mobile.
 
 ---
 
-## Sơ đồ pipeline
+## Bản đồ skill (13 + 1)
+
+| # | Skill | Vai trò | Phụ thuộc trước đó |
+|---|-------|---------|--------------------|
+| 1 | `/market-research` | Validate cầu thật, Niche Score /100 | — |
+| 2 | `/biz-offer-alex-hormozi` | Grand Slam Offer + `offer.json` | (1) |
+| 3 | `/biz-sales-page-copy` | Nâng cấp copy chốt đơn + A/B variants | (2) |
+| 4 | `/ui-ux-pro-max` | Build landing page Next.js production | (2)(3) |
+| 5 | `/biz-setup-sepay-payment` | VietQR + lead store (**Supabase**/KV) — NỀN TẢNG | (4) |
+| 6 | `/biz-nextjs-chatbot-openrouter` | Chatbot AI floating widget | (4) |
+| 7 | `/biz-email-setup` | Email auto-responder **SMTP (nodemailer)** | (4), wire vào (5) |
+| 8 | `/biz-telegram-payment-notify` | Báo đơn paid qua Telegram | (5) |
+| 9 | `/biz-admin-leads-dashboard` | `/admin` CRM (chỉ Supabase) | (5)+(7) |
+| 10 | `/biz-deploy-vercel` | Deploy production live | tất cả |
+| 11 | `/biz-admin-google-auth` ⭐ | Upgrade `/admin`: Google OAuth + allowlist | (9) |
+| 12 | `/biz-affiliate-system` ⭐ | Affiliate `?aff=` + hoa hồng + portal + tự đăng ký + leaderboard + email đối tác | (5 Supabase) |
+| 13 | `/biz-i18n-landing-page` ⭐ | Đa ngôn ngữ landing page | (4) |
+| — | `/biz-sales-page-layout` | ⚠️ DEPRECATED 2026-05-14 | — |
+
+> Bước **1–10** là pipeline core (dựng funnel nhận lead & tiền). Bước **11–13** là lớp mở rộng tuỳ chọn (⭐), chạy sau khi funnel đã có payment + admin.
+
+---
+
+## Sơ đồ pipeline (build-time)
+
+Luồng **dựng funnel** — 10 skill core chạy tuần tự khi build 1 sản phẩm mới (ý tưởng → live):
 
 ```mermaid
 flowchart TD
@@ -55,55 +74,101 @@ flowchart TD
     A1 -.->|"No-Go < 50"| Stop([Đổi niche])
 
     S2["📦 2. /biz-offer-alex-hormozi<br/>Grand Slam Offer<br/>Value Equation + 3-4 Bonus"]
-    S2 --> A2[("02-offer.md<br/>02-offer.json<br/>02-conversion-copy.md")]
+    S2 --> A2[("02-offer.md / .json<br/>02-conversion-copy.md")]
     A2 --> S3
 
     S3["✍️ 3. /biz-sales-page-copy<br/>Polish / Conversion-opt / Sales-letter<br/>+ A/B variants"]
-    S3 --> A3[("04-copy-upgraded.md<br/>04-copy-variants.md<br/>04-copy.json")]
+    S3 --> A3[("04-copy-upgraded.md<br/>04-copy-variants.md / .json")]
     A3 --> S4
 
     S4["🎨 4. /ui-ux-pro-max<br/>Next.js App Router<br/>style + palette + font pairing"]
     S4 --> A4[("landing-page/app/page.tsx<br/>components/LeadForm.tsx")]
     A4 --> S5
 
-    S5["💳 5. /biz-setup-sepay-payment<br/>VietQR payment infra<br/>Vercel KV / Supabase"]
-    S5 --> A5[("lib/leads-kv.ts<br/>app/api/checkout/route.ts<br/>app/api/sepay-webhook/route.ts")]
+    S5["💳 5. /biz-setup-sepay-payment<br/>VietQR + lead store<br/>Supabase (4 bảng) / Vercel KV"]
+    S5 --> A5[("lib/leads-store.ts<br/>api/checkout + api/sepay-webhook")]
     A5 --> S6 & S7 & S8 & S9
 
-    S6["💬 6. /biz-nextjs-chatbot-openrouter<br/>Floating support widget<br/>Gemini 3 Flash / Claude 3.5"]
+    S6["💬 6. /biz-nextjs-chatbot-openrouter<br/>Floating widget góc phải<br/>Gemini 3 Flash / Sonnet 4.6"]
     S6 --> A6[("components/ChatWidget.tsx<br/>app/api/chat/route.ts")]
 
-    S7["📧 7. /biz-email-setup<br/>Resend 2-stage flow<br/>welcome & payment webhook"]
-    S7 --> A7[("Email A: warm welcome<br/>Email B: owner alert")]
+    S7["📧 7. /biz-email-setup<br/>SMTP nodemailer 2-stage<br/>provider-agnostic"]
+    S7 --> A7[("app/api/lead/route.ts<br/>Email A khách + Email B owner")]
 
-    S8["🤖 8. /biz-telegram-payment-notify<br/>Telegram bot notification<br/>Realtime payment alert"]
-    S8 --> A8[("lib/telegram.ts<br/>Telegram messages")]
+    S8["🔔 8. /biz-telegram-payment-notify<br/>Bot báo đơn paid<br/>wire vào sepay-webhook"]
+    S8 --> A8[("lib/telegram.ts<br/>Promise.allSettled")]
 
-    S9["📊 9. /biz-admin-leads-dashboard<br/>Trang /admin xem đơn<br/>Timing-safe password protect"]
-    S9 --> A9[("app/admin/page.tsx<br/>app/api/admin/leads/route.ts")]
+    S9["📊 9. /biz-admin-leads-dashboard<br/>/admin CRM 3 tab (Supabase)<br/>KPI + chart + email marketing"]
+    S9 --> A9[("app/admin/page.tsx<br/>app/api/admin/*")]
 
-    A6 & A7 & A8 & A9 --> Local{{"🧪 Local test<br/>localhost:3000<br/>chatbot + payment + alerts"}}
+    A6 & A7 & A8 & A9 --> Local{{"🧪 Local test<br/>localhost:3000<br/>chatbot + payment + email + alert"}}
     Local --> S10
 
-    S10["🚀 10. /biz-deploy-vercel<br/>Triển khai qua Vercel CLI<br/>Cấu hình Env Vars & SSL"]
+    S10["🚀 10. /biz-deploy-vercel<br/>vercel --prod + env vars<br/>+ cấu hình webhook Sepay"]
     S10 --> A10[("Live URL<br/>https://*.vercel.app")]
 
-    A10 --> Live([🎯 Funnel LIVE<br/>đang nhận lead & tiền])
+    A10 --> Live([🎯 Funnel LIVE<br/>nhận lead & tiền])
+    Live -.nâng cấp tuỳ chọn.-> Ext["⭐ Lớp mở rộng<br/>11 google-auth · 12 affiliate · 13 i18n"]
 
     style Start fill:#fef3c7,stroke:#f59e0b
     style Live fill:#d1fae5,stroke:#10b981
     style Stop fill:#fee2e2,stroke:#ef4444
+    style Ext fill:#e9d5ff,stroke:#a855f7
     style S1 fill:#dbeafe
     style S2 fill:#dbeafe
     style S3 fill:#dbeafe
     style S4 fill:#dbeafe
-    style S5 fill:#dbeafe
+    style S5 fill:#fde68a,stroke:#f59e0b
     style S6 fill:#dbeafe
     style S7 fill:#dbeafe
     style S8 fill:#dbeafe
     style S9 fill:#dbeafe
     style S10 fill:#dbeafe
 ```
+
+---
+
+## Sơ đồ runtime thanh toán → webhook
+
+Sơ đồ trên là **build-time** (dựng funnel 1 lần). Sơ đồ dưới là **runtime** — điều gì xảy ra **mỗi khi một khách thật mua hàng**, từ lúc bấm nút tới lúc owner nhận thông báo. Đây là lúc các skill bước 5 (Sepay) + 7 (Email) + 8 (Telegram) + 9 (Admin) phối hợp (chi tiết thuật toán + vòng đời `status`: [so-do-thuat-toan-landing-page-supabase.md](so-do-thuat-toan-landing-page-supabase.md)):
+
+```mermaid
+sequenceDiagram
+    actor K as 👤 Khách
+    participant LP as Landing Page
+    participant CO as /api/checkout
+    participant DB as 🗄️ Lead store<br/>(Supabase / KV)
+    participant SP as Sepay (VietQR)
+    participant WH as /api/sepay-webhook
+    participant ML as 📧 Email (SMTP)
+    participant TG as 🔔 Telegram
+
+    K->>LP: Điền form (tên/SĐT/email) + chọn gói
+    Note over LP: validate SĐT regex ^(0|\+84)[0-9]{9}$
+    LP->>CO: POST /api/checkout
+    CO->>DB: dedup phone_index → nếu mới: order_counter+1
+    CO->>DB: lưu lead + order (status=pending, TTL 7d)
+    Note over CO: tính tiền theo gói + sinh mã đơn DH000123
+    CO-->>LP: { orderId, amount, bankInfo, qrUrl }
+    LP-->>K: trang /checkout/[orderId] — QR + số tiền + nội dung CK
+    Note over ML: Email A (pre-payment): thông tin chuyển khoản
+
+    K->>SP: quét QR, chuyển khoản
+    SP->>WH: webhook "đã nhận tiền" (nội dung = DH000123)
+    WH->>DB: webhook_dedup (chống xử lý trùng)
+    WH->>DB: markLeadPaid (status=paid, giữ 90d)
+
+    par Promise.allSettled (song song, fail không chặn)
+        WH->>ML: Email A (post-payment, bàn giao SP) + Email B (owner)
+        WH->>TG: ping owner "🎉 đơn mới: tên + SĐT + số tiền"
+    end
+    WH-->>SP: 200 OK luôn — dù email/telegram lỗi
+    Note over WH,SP: non-200 ⇒ Sepay retry ⇒ thông báo + email trùng
+
+    Note over DB: /admin (bước 9) đọc store → bảng lead · trạng thái paid · export CSV
+```
+
+> 🔑 **Bất biến quan trọng**: webhook **luôn trả 200** kể cả khi email/Telegram fail — vì Sepay sẽ **retry** nếu nhận non-200, gây thông báo + email trùng. Side-effect chạy qua `Promise.allSettled` để một cái lỗi không kéo cả response xuống. Vòng đời `status`: `pending` (7 ngày) → `paid` (90 ngày) → `expired` (pg_cron tự dọn).
 
 ---
 
@@ -121,447 +186,339 @@ output/<slug>/
 ├── 04-copy-variants.md              # Bước 3 (A/B test bank)
 ├── 04-copy-changes.md               # Bước 3 (diff Trước/Sau)
 ├── 04-copy.json                     # Bước 3 (structured)
-└── landing-page/                    # Bước 4 → 10 (Next.js project)
+└── landing-page/                    # Bước 4 → 13 (Next.js project)
     ├── app/
-    │   ├── page.tsx                 # Trang Landing Page chính
+    │   ├── page.tsx                 # Trang sales chính
     │   ├── admin/
-    │   │   └── page.tsx             # Bước 9: Dashboard quản lý
-    │   ├── checkout/
-    │   │   └── [orderId]/
-    │   │       └── page.tsx         # Bước 5: Trang hiển thị VietQR
+    │   │   ├── page.tsx             # Bước 9: Dashboard CRM
+    │   │   └── affiliates/page.tsx  # Bước 12: Quản trị affiliate
+    │   ├── affiliate/page.tsx       # Bước 12: Portal đối tác
+    │   ├── checkout/[orderId]/page.tsx # Bước 5: Trang VietQR
+    │   ├── i18n/                     # Bước 13: Context + dictionaries
     │   └── api/
-    │       ├── chat/route.ts        # Bước 6: API chatbot OpenRouter
-    │       ├── lead/route.ts        # Bước 7: API gửi email Resend
-    │       ├── checkout/route.ts    # Bước 5: API khởi tạo đơn hàng
-    │       ├── sepay-webhook/route.ts # Bước 5: API nhận webhook Sepay
-    │       └── admin/
-    │           └── leads/route.ts   # Bước 9: API danh sách leads bảo mật
+    │       ├── chat/route.ts         # Bước 6: chatbot OpenRouter
+    │       ├── lead/route.ts         # Bước 7: gửi email SMTP
+    │       ├── checkout/route.ts     # Bước 5: khởi tạo đơn
+    │       ├── sepay-webhook/route.ts # Bước 5: nhận webhook
+    │       ├── affiliate/route.ts    # Bước 12: portal data
+    │       └── admin/                # Bước 9 + 11: leads / dashboard / campaigns / me / admin-users
     ├── components/
-    │   ├── LeadForm.tsx             # Bước 4: Form đăng ký leads (tên/SĐT/email)
-    │   └── ChatWidget.tsx           # Bước 6: UI Chatbot bong bóng
+    │   ├── LeadForm.tsx              # Bước 4
+    │   ├── ChatWidget.tsx            # Bước 6
+    │   ├── AdminUsersTab.tsx         # Bước 11
+    │   └── AffiliateTracker.tsx      # Bước 12
     └── lib/
-        ├── leads-kv.ts              # Bước 5: Helper kết nối Vercel KV
-        ├── supabase.ts              # Bước 5: Helper kết nối Supabase (Lựa chọn thay thế)
-        └── telegram.ts              # Bước 8: Helper gửi tin nhắn Telegram
+        ├── leads-store.ts           # Bước 5: wrapper provider-agnostic
+        ├── leads-supabase.ts        # Bước 5: impl Supabase (mặc định)
+        ├── mailer.ts                # Bước 7/9: nodemailer transporter
+        ├── telegram.ts              # Bước 8
+        ├── admin-auth.ts            # Bước 11: requireAdmin (Google OAuth)
+        └── affiliate.ts             # Bước 12
 ```
 
-> **Lưu ý**: `03-*` bị bỏ trống cố ý — bước 3 cũ là `biz-sales-page-layout` (wireframe markdown) đã **deprecated 2026-05-14**. Pipeline mới đi thẳng từ `02-offer.json` → `ui-ux-pro-max` → `biz-sales-page-copy` (copy polish dùng prefix `04-*`).
+> **Lưu ý**: `03-*` bị bỏ trống cố ý — bước 3 cũ là `biz-sales-page-layout` (wireframe markdown) đã **deprecated 2026-05-14**. Pipeline mới đi thẳng `02-offer.json` → `ui-ux-pro-max` → `biz-sales-page-copy` (copy polish prefix `04-*`).
 
 ---
 
-## 10 bước chi tiết
+## 10 bước core chi tiết
 
 ### Bước 1 — Market Research (`/market-research`)
 
-**Mục đích**: Đo cầu thật của niche trước khi đổ effort. Không phải PESTEL, không phải Porter — đo bằng **keyword volume + marketplace sales + community signal + competitor pricing**.
+**Mục đích**: Đo cầu thật của niche trước khi đổ effort — bằng **keyword volume + marketplace sales (Shopee/Unica/Edumall/Gitiho) + community signal (FB group, TikTok hashtag, Zalo OA) + competitor pricing + unit economics**. Không phải PESTEL/Porter.
 
-**Input cần chuẩn bị**:
-- 1 mô tả niche/ý tưởng sản phẩm (1-2 câu)
-- Optional: customer persona sơ bộ
+**Output**: `01-niche-research-report.md` — Niche Score /100 (7 dimension, evidence ≥3 source mỗi claim) + quyết định **Go / Go-with-MVP / No-Go**.
 
-**Cách chạy**:
-```
-/market-research
-
-Niche: Khóa học dạy chủ SME VN cách dùng AI Agent để tự động hoá marketing social trong 30 ngày
-Tier giá dự kiến: 3-7M VND
-```
-
-**Output**:
-- `01-niche-research-report.md` — Niche Score /100 + evidence ≥3 source mỗi claim quan trọng
-- Quyết định **Go / Go-with-MVP / No-Go**
+| Score | Hành động |
+|-------|-----------|
+| ≥75 | Strong Go — chạy bước 2 ngay |
+| 65–74 | Solid Go-with-MVP — validate qua landing page trước khi build product |
+| 50–64 | Maybe — cần thêm research hoặc đổi angle |
+| <50 | No-Go — đổi niche |
 
 ---
 
 ### Bước 2 — Đóng gói Offer (`/biz-offer-alex-hormozi`)
 
-**Mục đích**: Biến niche đã validate thành **"grand slam offer"** không thể chối từ — theo Alex Hormozi $100M Offers + Value Proposition Design (Osterwalder).
+**Mục đích**: Biến niche đã validate thành **grand slam offer** không thể chối từ — Alex Hormozi $100M Offers + Value Proposition Design (Osterwalder).
 
-**2 input mode**:
-- **Mode B**: User paste sẵn pains + gains + product → skill đóng gói ngay
-- **Mode C**: User chỉ có sản phẩm → skill phỏng vấn theo VPD để surface pain/gain trước
+- **Mode B**: user paste sẵn pains + gains + product → đóng gói ngay.
+- **Mode C**: user chỉ có sản phẩm → skill phỏng vấn theo VPD để surface pain/gain trước.
 
-**Cách chạy**:
-```
-/biz-offer-alex-hormozi
+Skill ra: Value Equation scoring (4 lever) → Core Offer → **Bonus stack hybrid** (brainstorm 5–7 candidate, user pick 3–4) → Guarantee → Urgency → Pricing 3-tier decoy (VND charm).
 
-Sản phẩm: Khóa học 30 ngày "AI Marketing Agent cho chủ SME"
-Đọc context từ: output/<slug>/01-niche-research-report.md
-```
-
-**Output**:
-- `02-offer.md` — full markdown report tiếng Việt
-- `02-offer.json` — structured cho downstream (`ui-ux-pro-max` parse được)
-- `02-conversion-copy.md` — headline + subheadline + CTA paste-ready
+**Output**: `02-offer.md` + `02-offer.json` (downstream) + `02-conversion-copy.md` (headline/sub/CTA paste-ready).
 
 ---
 
 ### Bước 3 — Nâng cấp Copy (`/biz-sales-page-copy`)
 
-**Mục đích**: Biến copy thô từ `02-offer.json` thành **copy chốt đơn cao** với các Level: Polish, Conversion-optimized, và Sales-letter.
+**Mục đích**: Biến copy thô từ `02-offer.json` thành **copy chốt đơn cao** — 3 intensity level:
 
-**Cách chạy**:
-```
-/biz-sales-page-copy
+| Level | Khi nào | Output |
+|-------|---------|--------|
+| **1. Polish** | Copy đã ổn, cần punchy hơn | Light edit + power word |
+| **2. Conversion-optimized** | Cần rewrite + A/B test | Rewrite 5 block critical + variants hero/CTA |
+| **3. Sales-letter** | Ngách cần thuyết phục sâu | Long-form story-driven + P.S. |
 
-Đọc: output/<slug>/02-offer.json + 02-conversion-copy.md
-Intensity: Conversion-optimized
-Focus: hero, pain section, CTA cuối
-```
+Formula tự áp dụng: Pain → **PAR**, Solution → **BAB**, Benefit → **FEP**, Final CTA → **PVEN**, Testimonial → **Star-Chain-Hook**.
 
-**Output**:
-- `04-copy-upgraded.md` — copy mới
-- `04-copy-variants.md` — A/B test bank (3 hero + 3 CTA + 3 final-CTA)
-- `04-copy-changes.md` — diff Trước/Sau + lý do
-- `04-copy.json` — structured cho `ui-ux-pro-max`
+**Output**: `04-copy-upgraded.md` + `04-copy-variants.md` (3 hero + 3 CTA + 3 final-CTA) + `04-copy-changes.md` (diff) + `04-copy.json`.
 
 ---
 
 ### Bước 4 — Build Landing Page (`/ui-ux-pro-max`)
 
-**Mục đích**: Build Next.js App Router landing page **production-ready** từ `02-offer.json` + `04-copy.json`. Thiết lập UI/UX premium phù hợp với chủ đề.
+**Mục đích**: Build Next.js App Router landing page **production-ready** từ `02-offer.json` + `04-copy.json`. Design language nhất quán (67 styles · 96 palettes · 57 font pairings · shadcn/ui MCP), không phải Tailwind defaults.
 
-**Hard requirement**:
-- Form đăng ký bắt buộc có 3 trường: **Họ tên / Số điện thoại / Email**
-- Hỗ trợ đầy đủ Responsive (Mobile-first, Tablet, Desktop)
-- Component `LeadForm.tsx` chuẩn bị sẵn để wire sang endpoint thanh toán ở các bước sau.
+**Hard requirement**: form 3 field **tên / SĐT / email** · responsive mobile-first · `LeadForm.tsx` sẵn sàng wire sang checkout.
 
-**Cách chạy**:
-```
-/ui-ux-pro-max
-
-Đọc: output/<slug>/02-offer.json + 04-copy.json
-Style preference: editorial minimalism + claude-orange accent
-Output dir: output/<slug>/landing-page/
-Stack: Next.js 14 App Router + TypeScript + Tailwind + shadcn/ui
-```
+**Test local**: `cd output/<slug>/landing-page && npm install && npm run dev` → `localhost:3000`.
 
 ---
 
-### Bước 5 — Tích hợp Thanh toán VietQR (`/biz-setup-sepay-payment`)
+### Bước 5 — Thanh toán VietQR (`/biz-setup-sepay-payment`) — NỀN TẢNG
 
-**Mục đích**: Tích hợp hạ tầng thanh toán tự động VietQR thông qua cổng **Sepay.vn**. Khi khách hàng đăng ký đơn hàng → hệ thống sinh QR Code kèm nội dung chuyển khoản định danh (Ví dụ: `DH000123`) → Khách scan & chuyển khoản → Ngân hàng báo có → Sepay gửi Webhook về → Next.js tự động cập nhật trạng thái đơn hàng thành `paid`.
+**Mục đích**: Hạ tầng thanh toán tự động VietQR qua **Sepay.vn** + lead store. Đây là **nền tảng** cho bước 7/8/9/12.
 
-**Lưu trữ Lead (Lead Store)**: Sử dụng **Vercel KV** (Redis) hoặc **Supabase** (Postgres) để lưu đơn tạm thời với TTL 7 ngày (tránh phình database).
+- Phase 0: **HỎI user chọn lead store** — Vercel KV hoặc **Supabase** (default, free tier rộng hơn ~50× + có SQL + admin UI).
+- Supabase: 4 bảng `leads / phone_index / order_counter / webhook_dedup` (pg_cron TTL cleanup, RLS deny-all) + Vercel Cron ping `/api/health` mỗi 6 ngày chống auto-pause.
+- `lib/leads-store.ts` (wrapper provider-agnostic) → đổi provider = sửa 1 dòng re-export.
+- `order_id` định dạng `DH{6-digit}`. QR qua `https://qr.sepay.vn/img?...` (chỉ image URL, không cần backend).
+- `app/api/sepay-webhook/route.ts`: Apikey auth timing-safe + dedup theo `payload.id` + multi-strategy matching (content-orderid → content-phone → amount-timestamp) + side-effect placeholder sẵn cho email/telegram.
 
-**Cách chạy**:
-```
-/biz-setup-sepay-payment
-
-Project dir: output/<slug>/landing-page
-SEPAY_BANK_NAME: Vietcombank
-SEPAY_BANK_ACCOUNT_NUMBER: 1023456789
-SEPAY_WEBHOOK_API_KEY: sk_sepay_xxxxxxx
-```
-
-**Output**:
-- `lib/leads-kv.ts` (hoặc `lib/supabase.ts` nếu dùng Supabase)
-- `app/api/checkout/route.ts` — API tạo đơn hàng & sinh link VietQR
-- `app/api/sepay-webhook/route.ts` — API nhận webhook, kiểm tra chữ ký & cập nhật trạng thái đơn hàng.
-- Trang `/checkout/[orderId]` để khách hàng quét QR tiện lợi.
+**Output**: `lib/leads-store.ts` + `lib/leads-{supabase|kv}.ts` + `api/checkout` + `api/sepay-webhook` + trang `/checkout/[orderId]`.
 
 ---
 
-### Bước 6 — Cài Chatbot (`/biz-nextjs-chatbot-openrouter`)
+### Bước 6 — Chatbot AI (`/biz-nextjs-chatbot-openrouter`)
 
-**Mục đích**: Thêm **floating AI chatbot widget góc dưới phải** vào landing page, trả lời khách hàng 24/7 dùng knowledge base từ offer + FAQ.
+**Mục đích**: Floating widget góc dưới phải, trả lời khách 24/7 qua **OpenRouter** (mặc định `google/gemini-3-flash-preview`, đổi được sang `anthropic/claude-sonnet-4.6`), streaming, **render markdown** (react-markdown + remark-gfm), knowledge base từ offer + FAQ. Tự **extract + lưu lead** (tên/SĐT/email) vào KV/Upstash namespace `chat-lead:{phone}` (dedupe theo SĐT, TTL 90 ngày, fire-and-forget).
 
-**Cách chạy**:
-```
-/biz-nextjs-chatbot-openrouter
-
-Project dir: output/<slug>/landing-page
-Knowledge base: 02-offer.json + 02-conversion-copy.md
-Model: google/gemini-3-flash-preview
-Tone: tư vấn tự nhiên, xưng anh/chị, không pushy
-```
-
-**Output**:
-- `app/api/chat/route.ts` — streaming endpoint
-- `components/ChatWidget.tsx` — widget UI
+**Output**: `app/api/chat/route.ts` + `components/ChatWidget.tsx` + `.env.local` (`OPENROUTER_API_KEY`).
 
 ---
 
-### Bước 7 — Setup Email Auto-Responder (`/biz-email-setup`)
+### Bước 7 — Email Auto-Responder (`/biz-email-setup`)
 
-**Mục đích**: Wire form đăng ký lên **Resend API** để tự động gửi email khi có lead mới.
-- **Email A (Pre-payment)**: Gửi ngay khi điền form, cung cấp thông tin tài khoản ngân hàng để khách thanh toán.
-- **Email A (Post-payment)**: Gửi khi nhận được webhook giao dịch thành công (chứa thông tin bàn giao sản phẩm số/khóa học).
-- **Email B (Owner alert)**: Gửi thông báo đến email của bạn khi có lead mới đăng ký.
+**Mục đích**: Wire form lên **SMTP qua `nodemailer`** (KHÔNG cố định provider) — gửi email tự động khi có lead. 2-stage:
 
-**Cách chạy**:
-```
-/biz-email-setup
+| Stage | Trigger | Email |
+|-------|---------|-------|
+| Pre-payment | User submit form | Email A (warm welcome + payment link) + Email B (owner alert) |
+| Post-payment | Sepay webhook success | Email A (onboarding + bàn giao sản phẩm số) |
 
-Project dir: output/<slug>/landing-page
-Owner email: hoang.tran@prediction3d.com
-Sender domain: verification.prediction3d.com
-```
+- Hỏi user chọn provider: Gmail/Workspace, Resend SMTP, SendGrid, Mailgun, Brevo, Zoho, hoặc SMTP custom hosting VN.
+- **Draft 2 email → user duyệt** trước khi wire vào code. SPF/DKIM verification guide theo provider.
 
-**Output**:
-- `app/api/lead/route.ts` — endpoint gửi mail
-- `.env.local` cập nhật thêm `RESEND_API_KEY`
+**Output**: `app/api/lead/route.ts` + email templates + `.env.local` (`SMTP_HOST/SMTP_PORT/SMTP_USER/SMTP_PASS/MAIL_FROM/OWNER_EMAIL`).
 
 ---
 
-### Bước 8 — Setup Thông báo Telegram (`/biz-telegram-payment-notify`)
+### Bước 8 — Thông báo Telegram (`/biz-telegram-payment-notify`)
 
-**Mục đích**: Gửi thông báo tin nhắn Realtime qua **Telegram Bot** đến chat cá nhân của bạn hoặc Group chat của đội ngũ Sales ngay lập tức khi khách hàng chuyển khoản thành công.
+**Mục đích**: Bot Telegram báo realtime khi khách chuyển khoản thành công. Wire **cùng chỗ** với email trong `/api/sepay-webhook` qua `Promise.allSettled` — Telegram fail KHÔNG block 200 trả Sepay.
 
-**Cách chạy**:
-```
-/biz-telegram-payment-notify
+- Guide 3 bước tạo bot qua @BotFather + lấy `chat_id` (@userinfobot cho 1-1, `/getUpdates` cho group).
+- Message tiếng Việt: tên + SĐT + email + amount (`499.000đ`) + sản phẩm + timestamp giờ VN.
 
-Project dir: output/<slug>/landing-page
-TELEGRAM_BOT_TOKEN: 1234567890:AAxxxxxxxxxxxxxxxxxxxxxx
-TELEGRAM_CHAT_ID: 123456789 (hoặc chat ID nhóm -100xxxxxxxxxx)
-```
-
-**Output**:
-- `lib/telegram.ts` — helper gửi tin nhắn HTTP đến API Telegram
-- Tích hợp hàm `sendTelegramNotification` vào endpoint nhận webhook `sepay-webhook` thông qua `Promise.allSettled`.
+**Output**: `lib/telegram.ts` + `.env.local` (`TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`).
 
 ---
 
-### Bước 9 — Tạo Admin Dashboard (`/biz-admin-leads-dashboard`)
+### Bước 9 — Admin Dashboard (`/biz-admin-leads-dashboard`)
 
-**Mục đích**: Trang `/admin` siêu tinh gọn giúp bạn xem danh sách leads, doanh thu, trạng thái thanh toán. Bảo mật bằng một mật khẩu quản trị duy nhất trong biến môi trường (`ADMIN_PASSWORD`), nhập đúng sẽ unlock giao diện xem trực quan mà không cần cơ chế session/cookie phức tạp.
+**Mục đích**: Trang `/admin` CRM-style 1CRM-inspired (**chỉ Supabase**, KHÔNG còn KV). Sidebar 3 tab + popup nhập mã đăng nhập (mặc định `123456`).
 
-**Cách chạy**:
-```
-/biz-admin-leads-dashboard
+- **Tổng quan**: 4 KPI card (Tổng leads / Đã thanh toán / Tỷ lệ chuyển đổi / Doanh thu) có delta vs kỳ trước, line chart + donut (`recharts`), period 7d/30d/90d.
+- **Khách hàng**: bảng leads + search + filter trạng thái/ngày + CSV export.
+- **Email marketing**: soạn chiến dịch (text hoặc HTML, placeholder `{{name}}`, audience all/paid/pending/last_days) → **Xem trước** modal iframe → gửi bulk qua SMTP (**reuse `nodemailer` của bước 7**, throttle 200ms) → log per-recipient + bảng lịch sử.
 
-Project dir: output/<slug>/landing-page
-ADMIN_PASSWORD: your_strong_password
-```
+**Tiền đề**: phải có `lib/leads-supabase.ts` (bước 5 chọn Supabase) + SMTP env (bước 7).
 
-**Output**:
-- `app/admin/page.tsx` — trang dashboard (popup mật khẩu + bảng dữ liệu + export CSV)
-- `app/api/admin/leads/route.ts` — API trả về danh sách leads đã được xác thực bảo mật.
+**Output**: 8 file + migration `campaigns`/`campaign_sends` + `ADMIN_PASSWORD` + npm dep `recharts`.
 
 ---
 
 ### Bước 10 — Deploy Production (`/biz-deploy-vercel`)
 
-**Mục đích**: Đưa landing page đã hoàn thiện và kiểm thử local lên live URL production trên Vercel. Tự động kiểm tra cài đặt CLI, link project và đẩy biến môi trường.
+**Mục đích**: Bước cuối — đưa landing page đã test local lên live URL. Tự detect framework, auto-gen `vercel.json`, **push env vars** lên Vercel, chạy `vercel --prod`.
 
-**Cách chạy**:
-```
-/biz-deploy-vercel
+**Sau deploy**: cấu hình **Webhook URL trên Sepay Dashboard** trỏ tới `https://yourdomain.com/api/sepay-webhook` + chọn xác thực `API Key`.
 
-Project dir: output/<slug>/landing-page
-Project name: ai-marketing-agent-30-days
-```
-
-**Output**:
-- Live URL dạng `https://<project>.vercel.app`
-- Link Inspect/Logs để theo dõi trạng thái.
+**Output**: Live URL `https://<project>.vercel.app` + Inspect URL + (optional) custom domain guide.
 
 ---
 
-## Hướng dẫn Cơ sở Dữ liệu & Triển khai (Supabase & Vercel CLI)
+## Lớp mở rộng (post-funnel)
 
-### 1. Hướng dẫn Triển khai với Vercel CLI
+Bước 1–10 dựng funnel **nhận lead & tiền**. 3 skill mở rộng (⭐) nâng cấp funnel khi đã chạy ổn — đều yêu cầu **Supabase** (chọn ở bước 5).
 
-Vercel CLI cho phép bạn đẩy và quản lý dự án trực tiếp từ dòng lệnh máy tính.
+### Sơ đồ phụ thuộc lớp mở rộng
 
-#### Các bước thực hiện:
-1.  **Cài đặt Vercel CLI toàn cục** (nếu chưa có):
-    ```bash
-    npm install -g vercel
-    ```
-2.  **Đăng nhập vào Vercel**:
-    ```bash
-    vercel login
-    ```
-    *Lệnh này sẽ mở trình duyệt để bạn xác thực tài khoản qua Google, GitHub, hoặc Email.*
-3.  **Khởi tạo và Link dự án** (chạy tại thư mục dự án):
-    ```bash
-    vercel link
-    ```
-    *Chọn tài khoản của bạn, nhấn Enter để đồng ý liên kết và để Vercel tự động nhận diện framework.*
-4.  **Cấu hình Biến Môi trường (Env Vars) trên Vercel**:
-    Các key nhạy cảm trong file `.env.local` cần được đẩy lên Vercel để chạy trên production. Chạy lệnh:
-    ```bash
-    vercel env add OPENROUTER_API_KEY production
-    # Nhập API Key khi CLI yêu cầu
-    vercel env add RESEND_API_KEY production
-    # Nhập API Key khi CLI yêu cầu
-    vercel env add DATABASE_URL production
-    # Nhập chuỗi kết nối Database khi CLI yêu cầu
-    ```
-5.  **Triển khai Production**:
-    Chạy lệnh sau để build sản phẩm và publish trực tiếp:
-    ```bash
-    vercel --prod
-    ```
-    *Sau khi hoàn tất, bạn sẽ nhận được **Live URL** chính thức.*
+```mermaid
+flowchart TD
+    Live([🎯 Funnel LIVE<br/>sau bước 10]) --> Base
+
+    Base["💳 Nền tảng Supabase<br/>lib/leads-supabase.ts (bước 5)<br/>+ /admin (bước 9)"]
+    Base --> GAuth
+    Base --> Aff
+    Live -.độc lập.-> I18n
+
+    GAuth["🔐 11. /biz-admin-google-auth<br/>UPGRADE /admin: password → Google OAuth<br/>+ allowlist admin_users + super admin"]
+    Aff["🤝 12. /biz-affiliate-system<br/>link ?aff= + hoa hồng tier Pro/Elite<br/>portal /affiliate + /aff-register + leaderboard"]
+    I18n["🌐 13. /biz-i18n-landing-page<br/>đa ngôn ngữ client-side<br/>switcher pill, không đổi URL"]
+
+    Aff -.có thể bảo vệ /admin/affiliates bằng.-> GAuth
+
+    style Live fill:#d1fae5,stroke:#10b981
+    style Base fill:#fde68a,stroke:#f59e0b
+    style GAuth fill:#e9d5ff,stroke:#a855f7
+    style Aff fill:#e9d5ff,stroke:#a855f7
+    style I18n fill:#e9d5ff,stroke:#a855f7
+```
+
+### 11 — Google Auth cho /admin (`/biz-admin-google-auth`)
+
+**Vấn đề giải quyết**: `/admin` mặc định 1 password chung (`ADMIN_PASSWORD`) — không phân biệt ai, không thu hồi quyền 1 người. Skill đổi lớp auth sang **Google OAuth (Supabase Auth) + allowlist**: chỉ email trong bảng `admin_users` mới vào được, có **super admin** + tab **Quản trị viên** để thêm/xoá admin ngay trong dashboard.
+
+**Là skill UPGRADE** chạy **sau** bước 9 — không build lại dashboard, chỉ PATCH route `/api/admin/*` (`checkAdminPass` → `requireAdmin`) + `app/admin/page.tsx` (popup → Google gate + `adminFetch`).
+
+**Output**: migration `admin_users` (RLS deny-all + `is_admin_email`) + `lib/admin-auth.ts` + `lib/admin-client.ts` + `lib/admin-users.ts` + `api/admin/me` + `api/admin/admin-users` + `AdminUsersTab.tsx`. Env mới: `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`.
+
+> Bỏ qua nếu chỉ 1 người dùng `/admin` và muốn giữ password đơn giản.
+
+### 12 — Hệ thống Affiliate (`/biz-affiliate-system`)
+
+**Mục đích**: Đối tác gắn link `?aff=CODE` → skill gán đơn theo **last-touch cookie 30 ngày** → tính hoa hồng theo tier (**Pro 30% / Elite 40%**, chỉnh được) → tạo bản ghi hoa hồng khi đơn paid → theo dõi chi trả (chờ duyệt → đã duyệt → đã trả).
+
+**Output**: 3 bảng Supabase (`affiliates / affiliate_clicks / affiliate_commissions`) + ALTER `leads` thêm `aff_code` + `lib/affiliate.ts` + `AffiliateTracker` + 3 API route + trang quản trị `/admin/affiliates` + portal đối tác `/affiliate` (đăng nhập bằng mã aff + email). Patch 4 file (`leads-supabase.ts`, `api/register`, `api/sepay-webhook`, `layout.tsx`).
+
+**Phase 7 extensions (tuỳ chọn, xem `references/affiliate-extensions.md`)**:
+- **Trang đăng ký đối tác công khai** `/aff-register` — tự phục vụ, nhận mã aff + link ngay (không cần admin tạo tay).
+- **Bảng xếp hạng** `/api/admin/affiliate-leaderboard` — podium top đối tác theo tuần/tháng/năm.
+- **4 loại email cho đối tác** qua `lib/affiliate-mailer.ts`: welcome khi đăng ký · báo có hoa hồng mới khi đơn paid · báo đã chi trả hoa hồng · bulk email cho audience `affiliates`.
+
+**Tiền đề**: Sepay payment + `lib/leads-supabase.ts` (+ SMTP từ bước 7 nếu bật email đối tác). 1 tầng phẳng (không MLM nhiều tầng).
+
+### 13 — Đa ngôn ngữ Landing Page (`/biz-i18n-landing-page`)
+
+**Mục đích**: Biến landing page 1 ngôn ngữ thành đa ngôn ngữ — nút pill chuyển ngôn ngữ góc trên phải, đổi **tức thì không reload, không đổi URL**.
+
+- Phỏng vấn user (AskUserQuestion): chọn ngôn ngữ (Tiếng Việt / English / 中文 / 한국어 / Other) + ngôn ngữ mặc định.
+- Quét toàn bộ copy hardcode → dictionary → **tự dịch bản địa hoá** (giữ brand + giá VND + SĐT + URL).
+- i18n client-side trong `app/i18n/` (React Context + JSON + localStorage + auto-detect browser), **không thêm dependency**, KHÔNG đụng `app/api` hay `app/admin`.
+
+**Output**: `app/i18n/` + `LanguageProvider` + `LanguageSwitcher` + rewire component dùng hook `useT()`. File `vi.ts` làm source-of-truth type → TS bắt lỗi nếu thiếu key dịch.
+
+> Skill chỉ lo copy **hiển thị trên landing page** — KHÔNG dịch chatbot / email / admin.
 
 ---
 
-### 2. Kết nối CSDL Supabase (Postgres) cho Landing Page & Admin Dashboard
+## Hướng dẫn Supabase & Vercel CLI
 
-Nếu bạn muốn một cơ sở dữ liệu quan hệ PostgreSQL ổn định để lưu trữ Lead và Giao dịch lâu dài thay thế cho Vercel KV (Redis), **Supabase** là lựa chọn tốt nhất.
+### 1. Deploy với Vercel CLI
 
-#### Hướng dẫn lấy thông tin kết nối Supabase (Credentials)
-Để Next.js kết nối được với Supabase, bạn cần lấy các thông số sau trong Supabase Dashboard:
+```bash
+npm install -g vercel          # cài CLI (nếu chưa có)
+vercel login                   # xác thực qua Google/GitHub/Email
+vercel link                    # link dự án tại thư mục landing-page/
+# đẩy env vars lên production:
+vercel env add OPENROUTER_API_KEY production
+vercel env add SMTP_HOST production        # + SMTP_PORT/USER/PASS/MAIL_FROM/OWNER_EMAIL
+vercel env add SUPABASE_URL production     # + SUPABASE_SERVICE_ROLE_KEY
+vercel env add TELEGRAM_BOT_TOKEN production # + TELEGRAM_CHAT_ID
+vercel --prod                  # build + publish → Live URL
+```
 
-1.  **Truy cập vào dự án của bạn** tại [Supabase Dashboard](https://supabase.com/dashboard).
-2.  Bấm chọn **Project Settings** (biểu tượng bánh răng răng ở thanh menu góc dưới bên trái).
-3.  Chọn mục **API**:
-    *   `NEXT_PUBLIC_SUPABASE_URL`: Sao chép URL trong phần **Project URL** (Ví dụ: `https://xyz.supabase.co`).
-    *   `NEXT_PUBLIC_SUPABASE_ANON_KEY`: Sao chép API key trong mục **Project API Keys** hàng `anon` / `public`. Key này an toàn khi hiển thị ở phía Client-side.
-    *   `SUPABASE_SERVICE_ROLE_KEY`: Sao chép API key trong mục **Project API Keys** hàng `service_role` / `secret`. **CẢNH BÁO:** Không bao giờ để lộ key này ở client-side; chỉ dùng ở các API Route bảo mật ở Server-side.
-4.  Chọn mục **Database** (dưới mục Settings):
-    *   Cuộn xuống phần **Connection string**:
-        *   Chọn tab **URI**.
-        *   Sao chép chuỗi kết nối.
-        *   **Ví dụ:** `postgresql://postgres.[PROJECT-REF]:[YOUR-PASSWORD]@aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres?pgbouncer=true` (chế độ Transaction pooler hữu ích cho Serverless).
-        *   *Lưu ý:* Hãy thay thế `[YOUR-PASSWORD]` bằng mật khẩu database bạn đã thiết lập khi tạo dự án Supabase.
+### 2. Kết nối Supabase (Postgres)
 
-#### Cấu hình File `.env.local`
-Thêm các biến môi trường sau vào file `.env.local` ở thư mục root của dự án Next.js:
+Lấy credentials trong **Supabase Dashboard → Project Settings → API**:
+- `NEXT_PUBLIC_SUPABASE_URL` (Project URL) — an toàn ở client.
+- `NEXT_PUBLIC_SUPABASE_ANON_KEY` (anon/public) — an toàn ở client.
+- `SUPABASE_SERVICE_ROLE_KEY` (service_role) — **CHỈ server-side**, không bao giờ lộ ở client.
+
+`.env.local`:
 ```env
-# Supabase Public Keys (Client & Server)
 NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key-here
-
-# Supabase Secret Keys (Server-side Only)
-SUPABASE_SERVICE_ROLE_KEY=your-service-role-key-here
-
-# Postgres Connection String (dành cho Prisma / Drizzle / pg)
-DATABASE_URL=postgresql://postgres.[PROJECT-REF]:[YOUR-PASSWORD]@aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres?pgbouncer=true
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
+SUPABASE_URL=https://your-project.supabase.co
+SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
 ```
 
-#### Thiết lập cấu trúc bảng `leads` trên Supabase (Database Schema)
-Bạn truy cập vào **SQL Editor** trong thanh công cụ bên trái của Supabase Dashboard, tạo một query mới và chạy script SQL sau:
+> Migration SQL (4 bảng `leads/phone_index/order_counter/webhook_dedup` + RLS + pg_cron) do `/biz-setup-sepay-payment` tự sinh và hướng dẫn chạy trong SQL Editor — không cần viết tay.
 
-```sql
-create table leads (
-  id uuid default gen_random_uuid() primary key,
-  created_at timestamp with time zone default timezone('utc'::text, now()) not null,
-  order_id text unique not null, -- Định dạng: DH000123
-  name text not null,
-  phone text not null,
-  email text not null,
-  product_name text not null,
-  amount numeric not null,
-  status text default 'pending'::text not null, -- pending, paid, expired
-  payment_details jsonb, -- Lưu toàn bộ JSON log từ Sepay Webhook gửi sang
-  paid_at timestamp with time zone
-);
+### 3. Cài Supabase MCP Server
 
--- Tạo Index để tối ưu truy vấn tìm kiếm
-create index idx_leads_order_id on leads(order_id);
-create index idx_leads_phone on leads(phone);
+Hosted (khuyên dùng) — cấu hình cho Claude Code CLI:
+```bash
+claude mcp add --scope project --transport http supabase "https://mcp.supabase.com/mcp"
 ```
-
----
-
-### 3. Hướng dẫn cài đặt Supabase MCP Server
-
-Supabase MCP (Model Context Protocol) giúp AI Agent của bạn (ví dụ như Claude Code, Cursor) kết nối thẳng vào dự án Supabase để tự động đọc cấu trúc bảng, sửa database, chạy query SQL và viết code khớp 100% với database thật.
-
-#### Cách 1: Sử dụng Hosted Remote MCP Server (Khuyên dùng - Đơn giản nhất)
-Cách này không yêu cầu cài đặt gói npm nào trên máy cục bộ và xác thực bảo mật OAuth an toàn.
-
-*   **Server URL:** `https://mcp.supabase.com/mcp`
-*   **Cách cấu hình cho Claude Code CLI:**
-    Chạy lệnh này trực tiếp trong Terminal của bạn:
-    ```bash
-    claude mcp add --scope project --transport http supabase "https://mcp.supabase.com/mcp"
-    ```
-*   **Cách cấu hình thủ công qua file `.mcp.json`:**
-    Thêm config sau vào file `.mcp.json` trong dự án của bạn:
-    ```json
-    {
-      "mcpServers": {
-        "supabase": {
-          "type": "http",
-          "url": "https://mcp.supabase.com/mcp"
-        }
-      }
-    }
-    ```
-*   **Xác thực:** Lần đầu tiên AI agent gọi đến công cụ, trình duyệt của bạn sẽ tự động bật tab yêu cầu bạn đăng nhập Supabase và chọn tổ chức/dự án muốn cấp quyền.
-
-#### Cách 2: Sử dụng Local NPX Package (Stdio Local)
-Nếu muốn chạy server MCP trực tiếp trên tài nguyên máy cục bộ của bạn, bạn sử dụng package `@supabase/mcp-server-supabase`.
-
-*   **Bước 1: Tạo token cá nhân (PAT):**
-    Vào **Supabase Account Settings** -> **Access Tokens** -> Bấm **Generate new token** để lấy Personal Access Token.
-*   **Bước 2: Cấu hình trong `.mcp.json` (dành cho Cursor / Claude Desktop):**
-    ```json
-    {
-      "mcpServers": {
-        "supabase": {
-          "command": "npx",
-          "args": [
-            "-y",
-            "@supabase/mcp-server-supabase@latest",
-            "--access-token",
-            "<YOUR_PERSONAL_ACCESS_TOKEN>"
-          ]
-        }
-      }
-    }
-    ```
-    *(Thay `<YOUR_PERSONAL_ACCESS_TOKEN>` bằng Token cá nhân bạn vừa tạo).*
+Lần đầu agent gọi tool, trình duyệt bật tab đăng nhập Supabase + chọn dự án cấp quyền. (Repo này đã wire sẵn Supabase MCP ở `.mcp.json`.)
 
 ---
 
 ## Checklist Go-Live
 
-Trước khi chia sẻ landing page cho khách hàng thực tế, hãy rà soát kỹ danh sách sau:
-
-- [ ] **Niche Score ≥ 65** từ bước 1 (có bằng chứng cụ thể từ ít nhất 3 nguồn tin cậy).
-- [ ] `02-offer.json` chứa đầy đủ cấu trúc Core Offer + Bonus Stack (3-4 món) + Guarantee + Pricing VND.
-- [ ] Giao diện landing page đã được kiểm tra hiển thị responsive ở 3 viewport chuẩn: **375px (mobile)**, **768px (tablet)**, **1440px (desktop)** trên `localhost:3000`.
-- [ ] Form đăng ký `LeadForm.tsx` hoạt động tốt, validate định dạng SĐT Việt Nam: `/^(0|\+84)[0-9]{9}$/`.
-- [ ] Bấm đăng ký đơn hàng -> sinh mã `DHxxxxxx` -> lưu vào KV hoặc Supabase và hiển thị trang Checkout với QR Code chính xác.
-- [ ] Quét thử QR Code bằng App Ngân hàng -> kiểm tra thông tin ngân hàng thụ hưởng, số tiền, và nội dung chuyển khoản đã được điền sẵn chuẩn xác.
-- [ ] Đẩy toàn bộ biến môi trường (`OPENROUTER_API_KEY`, `RESEND_API_KEY`, `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`, `DATABASE_URL`...) lên Vercel Environment Variables.
-- [ ] Chạy `vercel --prod` -> kiểm tra trang live chạy HTTPS mượt mà, không lỗi Console.
-- [ ] Cấu hình Webhook URL trên Sepay Dashboard trỏ tới link live (`https://yourdomain.com/api/sepay-webhook`) và chọn phương thức xác thực `API Key`.
-- [ ] Kiểm thử 1 đơn hàng thật bằng cách chuyển khoản 1.000đ:
-  - Check xem tin nhắn Telegram có đổ về ngay lập tức không (<3s).
-  - Check hòm thư xem khách hàng có nhận được Email cảm ơn kèm sản phẩm không.
-  - Check xem Admin Dashboard `/admin` có hiển thị đơn hàng đó với trạng thái `paid` không.
+- [ ] **Niche Score ≥ 65** (evidence ≥3 source mỗi claim).
+- [ ] `02-offer.json` đủ anchor + core + bonus (3–4) + guarantee + urgency + pricing 3-tier.
+- [ ] Copy qua `/biz-sales-page-copy` ít nhất Level 1 (Polish).
+- [ ] Landing page test 3 viewport: 375px / 768px / 1440px trên `localhost:3000`.
+- [ ] Form `LeadForm.tsx` validate SĐT `^(0|\+84)[0-9]{9}$`, email valid.
+- [ ] Bấm đăng ký → sinh `DHxxxxxx` → lưu Supabase → trang `/checkout` hiện QR đúng số tiền + nội dung.
+- [ ] Quét QR thử bằng app ngân hàng → đúng STK thụ hưởng + số tiền + nội dung.
+- [ ] Chatbot widget local: hiện góc phải, test 3 câu trả lời đúng.
+- [ ] Submit form local → nhận **Email A** (không vào spam) + owner nhận **Email B**.
+- [ ] **Sau khi local OK** → `/biz-deploy-vercel`.
+- [ ] Env vars trên Vercel đủ: `OPENROUTER_API_KEY`, `SMTP_*`, `SUPABASE_*`, `TELEGRAM_*`.
+- [ ] Cấu hình Webhook URL trên Sepay Dashboard → `https://yourdomain.com/api/sepay-webhook` + API Key.
+- [ ] Test 1 đơn thật 1.000đ: Telegram về <3s + khách nhận Email + `/admin` hiện đơn `paid`.
+- [ ] (Nếu dùng) `/biz-admin-google-auth`: đăng nhập Gmail vào được, email ngoài allowlist bị chặn.
+- [ ] (Nếu dùng) `/biz-affiliate-system`: link `?aff=` ghi cookie, đơn gán đúng affiliate, hoa hồng tính đúng tier.
 
 ---
 
-## Skills đã bị deprecated
+## Skills đã deprecated
 
-| Skill | Status | Lý do | Thay thế bằng |
-|-------|--------|-------|---------------|
+| Skill | Status | Lý do | Thay thế |
+|-------|--------|-------|----------|
 | `/biz-sales-page-layout` | ⚠️ DEPRECATED 2026-05-14 | Wireframe markdown trung gian không tạo giá trị — `ui-ux-pro-max` đọc `02-offer.json` ra Next.js production luôn | Đi thẳng `02-offer.json` → `/ui-ux-pro-max` |
+
+> Chỉ dùng khi user **explicitly** yêu cầu wireframe markdown để review/print/share trước khi build code (rare).
 
 ---
 
 ## FAQ vận hành
 
-**Q: Có thể skip bước nào không?**
-- Skip bước 1 nếu đã có niche validated từ trước (paste sẵn pain/gain vào bước 2).
-- Skip bước 3 nếu copy từ bước 2 đã đủ chất lượng cho MVP.
-- **Không skip bước 4** — landing page là xương sống cho mọi bước sau.
-- Bước 6, 7, 8, 9 có thể chạy parallel hoặc skip bớt tùy nhu cầu của bạn (ví dụ chỉ cần Telegram mà không cần email, hoặc không cần chatbot hỗ trợ).
+**Q: Skip bước nào được?**
+- Skip 1 nếu đã có niche validated (paste pain/gain vào bước 2).
+- Skip 3 nếu copy bước 2 đủ cho MVP — quay lại upgrade sau khi có data conversion.
+- **Không skip 4** — landing page là xương sống.
+- Bước 6/7/8/9 chạy parallel hoặc skip bớt tuỳ nhu cầu (ví dụ chỉ Telegram, không email). Nhưng test local OK hết rồi mới sang 10.
+- **Không skip 5** nếu cần nhận tiền — đây là nền tảng cho 7/8/9/12.
+- Bước 11/12/13 hoàn toàn tuỳ chọn, chạy sau khi funnel ổn định.
 
-**Q: Cần các API Key nào để vận hành trọn bộ?**
-- `OPENROUTER_API_KEY` (AI Chatbot) — lấy từ openrouter.ai
-- `RESEND_API_KEY` (Email gửi đi) — lấy từ resend.com
-- `SEPAY_WEBHOOK_API_KEY` (Xác thực Webhook) — lấy từ my.sepay.vn
-- `TELEGRAM_BOT_TOKEN` (Gửi tin nhắn Telegram) — tạo qua @BotFather trên Telegram
-- `DATABASE_URL` (Kết nối CSDL) — lấy từ dự án Supabase.
+**Q: Resume pipeline ở giữa được không?**
+- Có. Skill nào cũng đọc artifact đầu vào (`02-offer.json`, `04-copy.json`, `lib/leads-supabase.ts`…) từ disk — miễn file tồn tại đúng path là tiếp được.
+
+**Q: Cần API key gì?**
+- `OPENROUTER_API_KEY` (bước 6 chatbot) — openrouter.ai
+- SMTP credentials (bước 7 email) — tuỳ provider (Gmail/Resend/Brevo/SendGrid/Zoho/custom)
+- `SEPAY_WEBHOOK_API_KEY` (bước 5) — my.sepay.vn
+- `SUPABASE_URL` + `SUPABASE_SERVICE_ROLE_KEY` (bước 5 Supabase) — Supabase Dashboard
+- `TELEGRAM_BOT_TOKEN` + `TELEGRAM_CHAT_ID` (bước 8) — @BotFather
+- Vercel auth (bước 10) — `vercel login`, không cần key
+
+**Q: KV hay Supabase?**
+- **Supabase** (mặc định, khuyên dùng): free tier rộng hơn ~50×, có SQL + admin UI, **bắt buộc** cho admin dashboard / affiliate / google-auth.
+- Vercel KV: chỉ phù hợp funnel tối giản không cần admin/affiliate.
+
+**Q: Multi-project parallel?**
+- Mỗi project 1 `output/<slug>/` riêng — chạy nhiều niche song song không conflict.
 
 ---
 
-## Tham chiếu file thực tế (case study)
+## Tham chiếu
 
-Project mẫu `ai-agent-marketing-busy-owner` đã chạy đầy đủ pipeline — xem `output/ai-agent-marketing-busy-owner/` để tham chiếu cấu trúc thực tế:
-
-- [01-niche-research-report.md](output/ai-agent-marketing-busy-owner/01-niche-research-report.md) — Niche Score 78/100 Solid Go
-- [02-offer.json](output/ai-agent-marketing-busy-owner/02-offer.json) — structured offer cho downstream
-- [02-offer.md](output/ai-agent-marketing-busy-owner/02-offer.md) — human-readable offer report
-- [04-copy-upgraded.md](output/ai-agent-marketing-busy-owner/04-copy-upgraded.md) — copy đã polish
-- [landing-page/](output/ai-agent-marketing-busy-owner/landing-page/) — Next.js project
-- [landing-page/components/LeadForm.tsx](output/ai-agent-marketing-busy-owner/landing-page/components/LeadForm.tsx) — form 3 field tên/SĐT/email
+- [so-do-thuat-toan-landing-page-supabase.md](so-do-thuat-toan-landing-page-supabase.md) — thuật toán checkout/webhook + vòng đời `status` chi tiết.
+- `.claude/skills/<skill-name>/SKILL.md` — prompt đầy đủ từng skill.
+- `CLAUDE.md` / `AGENTS.md` — hướng dẫn cho AI agent khi làm việc trong repo.
